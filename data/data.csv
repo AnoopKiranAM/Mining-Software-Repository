@@ -1,0 +1,357 @@
+IDs,Repo,Pull Request,Organization,Primary Language,Root Cause,Manifestation,Category,Sub-Category,RAdd,REdit,RRemove,RAPI,w/o Tests,mergetime_minutes,num_commits,code_churn,files_changed,Pattern
+23,https://github.com/apache/juneau,https://github.com/apache/juneau/pull/16,apache,Java,Other,new feature,regex-like implementation,,2,,,,YES,372.6166667,4,387,7,NA
+28,https://github.com/apache/incubator-druid,https://github.com/apache/incubator-druid/pull/4055,apache,Java,Other,new feature,regex-like implementation,,,,,1,YES,14543.25,2,252,8,NA
+29,https://github.com/apache/incubator-gobblin,https://github.com/apache/incubator-gobblin/pull/63,apache,Java,Other,new feature,regex configuration entry,,1,,,,YES,7069.75,19,1384,18,NA
+38,https://github.com/apache/ambari,https://github.com/apache/ambari/pull/760,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,2,YES,7685.116667,3,28,2,NA
+39,https://github.com/apache/nutch,https://github.com/apache/nutch/pull/234,apache,Java,Regex,compile errors,,,,1,,1,NO,1131.25,2,28,7,NA
+43,https://github.com/apache/ambari-metrics,https://github.com/apache/ambari-metrics/pull/8,apache,Java,Other,new feature,regex configuration entry,,2,,,,YES,1230.333333,1,15,2,NA
+44,https://github.com/apache/incubator-druid,https://github.com/apache/incubator-druid/pull/2130,apache,Java,Other,other failures,,,1,,,,YES,16775.78334,3,1491,29,NA
+45,https://github.com/apache/incubator-brooklyn,https://github.com/apache/incubator-brooklyn/pull/910,apache,Java,Other,new feature,regex-like implementation,,2,,,,YES,53430.68333,4,351,8,NA
+64,https://github.com/apache/ambari,https://github.com/apache/ambari/pull/730,apache,Java,Other,other failures,,,5,1,1,,YES,830.05,1,2191,16,NA
+78,https://github.com/apache/sling-org-apache-sling-feature,https://github.com/apache/sling-org-apache-sling-feature/pull/4,apache,Java,Other,bad smells,,,2,,,,YES,33485.51667,1,112,2,NA
+84,https://github.com/apache/incubator-tamaya,https://github.com/apache/incubator-tamaya/pull/21,apache,Java,Regex,incorrect behavior,accepting invalid strings (T2),,,2,,,YES,58.1,1,9,2,1
+85,https://github.com/apache/guacamole-client,https://github.com/apache/guacamole-client/pull/356,apache,Java,Other,new feature,data processing,,1,,,,NO,1232.966667,1,309,1,NA
+98,https://github.com/apache/commons-lang,https://github.com/apache/commons-lang/pull/96,apache,Java,Regex,bad smells,design smells,unnecessary regex,,,1,,YES,37440.98333,1,768,6,3
+108,https://github.com/apache/incubator-druid,https://github.com/apache/incubator-druid/pull/3642,apache,Java,Other,new feature,regex-like implementation,,2,,,,YES,4175.85,9,1085,10,NA
+118,https://github.com/apache/cordova-ios,https://github.com/apache/cordova-ios/pull/376,apache,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,54634.05,1,2,1,NA
+119,https://github.com/apache/incubator-gobblin,https://github.com/apache/incubator-gobblin/pull/1836,apache,Java,Other,new feature,regex configuration entry,,1,,,,YES,5558.133334,2,1336,7,NA
+126,https://github.com/apache/struts,https://github.com/apache/struts/pull/56,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,YES,4296.816667,2,5,2,NA
+127,https://github.com/apache/incubator-rya,https://github.com/apache/incubator-rya/pull/7,apache,Java,Other,new feature,regex configuration entry,,1,,,,YES,24622.78333,1,248,5,NA
+128,https://github.com/apache/struts,https://github.com/apache/struts/pull/159,apache,Java,Regex,bad smells,code smells,performance issues,,1,,,NO,3985.583334,1,23,1,1
+129,https://github.com/apache/beam,https://github.com/apache/beam/pull/6092,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,1,YES,6509.150001,4,14,2,NA
+136,https://github.com/apache/kafka,https://github.com/apache/kafka/pull/4809,apache,Java,Regex,bad smells,design smells,unnecessary regex,,,1,,YES,56099.73334,5,289,8,3
+151,https://github.com/apache/commons-lang,https://github.com/apache/commons-lang/pull/179,apache,Java,Other,bad smells,,,1,,,,YES,87176.13333,3,154,2,NA
+156,https://github.com/apache/ambari,https://github.com/apache/ambari/pull/2439,apache,Java,API,bad smells,code smells,unnecessary computation,,,,17,NO,2604.8,3,60,9,9
+159,https://github.com/apache/incubator-heron,https://github.com/apache/incubator-heron/pull/379,apache,Java,Other,other failures,,,1,,,,NO,19.44999999,3,8,1,NA
+160,https://github.com/apache/kafka,https://github.com/apache/kafka/pull/5168,apache,Java,API,bad smells,code smells,unnecessary computation,6,,,10,NO,95287.68333,1,88,11,9
+170,https://github.com/apache/incubator-pinot,https://github.com/apache/incubator-pinot/pull/3136,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,31.06666666,1,35,2,4
+173,https://github.com/apache/tinkerpop,https://github.com/apache/tinkerpop/pull/860,apache,Java,Regex,bad smells,design smells,unnecessary regex,,,1,,NO,34428.98333,8,68,7,4
+174,https://github.com/apache/geode,https://github.com/apache/geode/pull/1577,apache,Java,Regex,bad smells,code smells,regex representation,,1,,2,YES,1630.35,2,245,5,NA
+175,https://github.com/apache/airflow,https://github.com/apache/airflow/pull/4119,apache,Python,Other,new feature,regex configuration entry,,1,,,,YES,7488.350001,4,547,3,NA
+179,https://github.com/apache/cxf,https://github.com/apache/cxf/pull/479,apache,Java,Regex,bad smells,design smells,unnecessary regex,,,52,,YES,2475.65,3,152,33,NA
+185,https://github.com/apache/incubator-heron,https://github.com/apache/incubator-heron/pull/3143,apache,Java,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NA,122.0833333,1,6,1,NA
+190,https://github.com/apache/beam,https://github.com/apache/beam/pull/5528,apache,Java,Other,new feature,regex-like implementation,,1,,,,YES,9261.383334,2,124,7,NA
+208,https://github.com/apache/struts,https://github.com/apache/struts/pull/176,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,2356.299999,3,32,2,NA
+210,https://github.com/apache/struts,https://github.com/apache/struts/pull/47,apache,Java,Other,new feature,regex configuration entry,,2,,,,YES,39642.81667,32,1095,29,NA
+215,https://github.com/apache/accumulo,https://github.com/apache/accumulo/pull/628,apache,Java,Other,new feature,data processing,,5,,,,YES,2478.333334,2,766,104,NA
+215,https://github.com/apache/accumulo,https://github.com/apache/accumulo/pull/628,apache,Java,Regex,bad smells,code smells,performance issues,,4,,,YES,2478.333334,2,766,104,NA
+217,https://github.com/apache/infrastructure-puppet,https://github.com/apache/infrastructure-puppet/pull/752,apache,Python,Regex,incorrect behavior,rejecting valid strings (T1),,2,,,,NO,25.65,2,2,1,6
+218,https://github.com/apache/incubator-druid,https://github.com/apache/incubator-druid/pull/2008,apache,Java,Other,new feature,regex-like implementation,,1,,,,YES,12602.01667,1,171,4,NA
+223,https://github.com/apache/tika,https://github.com/apache/tika/pull/204,apache,Java,Other,new feature,data processing,,5,,,,YES,20621.1,3,758,7,NA
+228,https://github.com/apache/jena,https://github.com/apache/jena/pull/292,apache,Java,API,bad smells,code smells,exception handling,,,,2,YES,17.68333333,2,127,5,NA
+230,https://github.com/apache/karaf-decanter,https://github.com/apache/karaf-decanter/pull/48,apache,JavaScript,Other,new feature,regex configuration entry,,1,,,,NO,49.63333333,1,42,2,NA
+236,https://github.com/apache/oodt,https://github.com/apache/oodt/pull/33,apache,Java,Other,new feature,regex-like implementation,,1,,,,NO,9777.316667,2,51,2,NA
+237,https://github.com/apache/cordova-windows,https://github.com/apache/cordova-windows/pull/52,apache,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,14686.93333,2,4,1,NA
+249,https://github.com/apache/usergrid,https://github.com/apache/usergrid/pull/82,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,58013.21667,1,2,1,2
+286,https://github.com/apache/nutch,https://github.com/apache/nutch/pull/390,apache,Java,API,bad smells,code smells,deprecated APIs,,,,16,NO,3593.2,1,347,12,NA
+290,https://github.com/apache/activemq-artemis,https://github.com/apache/activemq-artemis/pull/235,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,194.7333334,1,84,3,4
+291,https://github.com/apache/incubator-pinot,https://github.com/apache/incubator-pinot/pull/2894,apache,Java,Other,bad smells,,,5,,,,NO,9970.533333,1,536,27,NA
+292,https://github.com/apache/struts,https://github.com/apache/struts/pull/157,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,7099.433333,3,23,2,1
+294,https://github.com/apache/usergrid,https://github.com/apache/usergrid/pull/257,apache,Java,Other,bad smells,,,1,,2,,YES,6283.633333,4,397,7,NA
+299,https://github.com/apache/incubator-superset,https://github.com/apache/incubator-superset/pull/4990,apache,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,YES,128.3666667,1,13,2,2
+305,https://github.com/apache/commons-lang,https://github.com/apache/commons-lang/pull/92,apache,Java,API,bad smells,code smells,exception handling,,,,2,YES,218379.6333,1,161,2,8
+315,https://github.com/apache/brooklyn-server,https://github.com/apache/brooklyn-server/pull/558,apache,Java,Other,new feature,regex configuration entry,,1,,,,YES,2891.7,1,247,2,NA
+319,https://github.com/apache/struts,https://github.com/apache/struts/pull/151,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,1386.15,2,28,2,"1, 2"
+325,https://github.com/apache/flink,https://github.com/apache/flink/pull/6442,apache,Java,Other,bad smells,,,2,,,,NA,5330.95,2,42,3,NA
+330,https://github.com/apache/incubator-superset,https://github.com/apache/incubator-superset/pull/5502,apache,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,935.9833333,1,11,2,NA
+336,https://github.com/apache/kafka,https://github.com/apache/kafka/pull/6123,apache,Java,Regex,incorrect behavior,incorrect extraction,,,1,,,YES,5669.1,2,17,2,NA
+344,https://github.com/apache/cordova-blackberry,https://github.com/apache/cordova-blackberry/pull/157,apache,JavaScript,Regex,incorrect behavior,incorrect extraction,,,1,,,YES,281.1666666,1,16,2,2
+353,https://github.com/apache/incubator-druid,https://github.com/apache/incubator-druid/pull/6307,apache,Java,Regex,bad smells,design smells,unnecessary regex,,,1,1,YES,52884.45,4,254,5,8
+355,https://github.com/apache/ambari,https://github.com/apache/ambari/pull/1116,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,108.5,1,2,1,NA
+363,https://github.com/apache/netbeans,https://github.com/apache/netbeans/pull/851,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,2862.066666,1,230,2,NA
+366,https://github.com/apache/incubator-superset,https://github.com/apache/incubator-superset/pull/5105,apache,JavaScript,Regex,bad smells,design smells,other,1,1,,1,YES,2234.516666,1,26,3,NA
+371,https://github.com/apache/incubator-retired-mrql,https://github.com/apache/incubator-retired-mrql/pull/2,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,3,1,,,NO,1271.766667,1,6,1,NA
+378,https://github.com/apache/incubator-openwhisk-utilities,https://github.com/apache/incubator-openwhisk-utilities/pull/16,apache,Python,Other,new feature,regex configuration entry,,1,,,,NO,1229.05,4,92,4,NA
+380,https://github.com/apache/pulsar,https://github.com/apache/pulsar/pull/1279,apache,Java,Other,new feature,regex configuration entry,,1,,,,YES,4452.6,4,1722,22,NA
+381,https://github.com/apache/jena,https://github.com/apache/jena/pull/261,apache,Java,Other,new feature,regex-like implementation,,,2,,,YES,4604.766667,1,121,5,NA
+412,https://github.com/apache/airflow,https://github.com/apache/airflow/pull/926,apache,Python,Other,other failures,,,1,,,,NO,2926.966667,1,8,1,NA
+415,https://github.com/apache/incubator-druid,https://github.com/apache/incubator-druid/pull/1098,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,27.66666666,1,24,1,NA
+421,https://github.com/apache/commons-jexl,https://github.com/apache/commons-jexl/pull/9,apache,Java,Other,new feature,regex-like implementation,,1,,,,YES,34941.05001,4,151,9,NA
+426,https://github.com/apache/ambari,https://github.com/apache/ambari/pull/754,apache,Java,Other,new feature,data processing,,1,,,,YES,2624.666666,1,37,2,NA
+438,https://github.com/apache/infrastructure-puppet,https://github.com/apache/infrastructure-puppet/pull/590,apache,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,4.666666667,1,2,1,NA
+443,https://github.com/apache/accumulo-testing,https://github.com/apache/accumulo-testing/pull/52,apache,Java,Other,bad smells,,,,,1,,NO,1120.666667,4,102,4,NA
+448,https://github.com/apache/incubator-pinot,https://github.com/apache/incubator-pinot/pull/1192,apache,Java,Other,new feature,regex-like implementation,,10,,,,YES,14177.78333,5,502,30,NA
+452,https://github.com/apache/incubator-superset,https://github.com/apache/incubator-superset/pull/5295,apache,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,,2,,YES,28697.23333,2,168,3,4
+463,https://github.com/apache/drill,https://github.com/apache/drill/pull/452,apache,Java,Other,new feature,regex-like implementation,,1,,,,YES,4220.333333,1,352,7,NA
+474,https://github.com/apache/incubator-superset,https://github.com/apache/incubator-superset/pull/4947,apache,JavaScript,Other,bad smells,,,1,,,,YES,9512.566667,5,216,6,NA
+475,https://github.com/apache/struts,https://github.com/apache/struts/pull/156,apache,Java,Regex,bad smells,code smells,performance issues,,1,,,NO,907.15,1,23,1,NA
+482,https://github.com/apache/nutch,https://github.com/apache/nutch/pull/389,apache,Java,API,bad smells,code smells,deprecated APIs,,,,11,YES,5328.7,3,708,13,NA
+494,https://github.com/apache/brooklyn-server,https://github.com/apache/brooklyn-server/pull/589,apache,Java,API,incorrect computation,,,,,,2,NA,44299.41667,1,36,2,NA
+517,https://github.com/apache/sling-org-apache-sling-dynamic-include,https://github.com/apache/sling-org-apache-sling-dynamic-include/pull/3,apache,Java,Other,bad smells,,,1,,,,YES,9942.200001,7,449,9,NA
+519,https://github.com/apache/cordova-common,https://github.com/apache/cordova-common/pull/45,apache,JavaScript,Regex,incorrect behavior,incorrect extraction,,,1,,,YES,7821.033333,1,34,2,NA
+537,https://github.com/apache/nutch,https://github.com/apache/nutch/pull/432,apache,Java,API,bad smells,code smells,unnecessary computation,,,,1,NO,9858.516667,1,66,5,NA
+537,https://github.com/apache/nutch,https://github.com/apache/nutch/pull/432,apache,Java,Regex,bad smells,code smells,performance issues,,12,,,NO,9858.516667,1,66,5,NA
+548,https://github.com/apache/karaf,https://github.com/apache/karaf/pull/742,apache,Java,Regex,compile errors,,,,,3,,NO,419,1,6,1,NA
+556,https://github.com/apache/cordova-serve,https://github.com/apache/cordova-serve/pull/14,apache,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,17077.58333,9,21,2,NA
+558,https://github.com/apache/pulsar,https://github.com/apache/pulsar/pull/2219,apache,Java,Other,new feature,regex configuration entry,,1,,,,YES,15672.88333,3,1064,21,NA
+559,https://github.com/apache/sling-org-apache-sling-xss,https://github.com/apache/sling-org-apache-sling-xss/pull/3,apache,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,8,1,,YES,3028.666667,3,474,6,NA
+566,https://github.com/apache/incubator-superset,https://github.com/apache/incubator-superset/pull/5495,apache,JavaScript,Other,bad smells,,,1,,,,YES,912.5333333,2,27,2,NA
+580,https://github.com/apache/maven-scm,https://github.com/apache/maven-scm/pull/10,apache,Java,API,bad smells,code smells,deprecated APIs,,7,,271,NO,1180.683333,8,1142,45,NA
+604,https://github.com/mozilla/mozregression,https://github.com/mozilla/mozregression/pull/78,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,11623.3,3,45,3,NA
+608,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/142,mozilla,JavaScript,Regex,bad smells,design smells,other,1,1,,2,YES,16,1,111,4,NA
+610,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/180,mozilla,Python,Other,other failures,,,3,,,,NO,1343.85,1,94,6,NA
+613,https://github.com/mozilla/minion-skipfish-plugin,https://github.com/mozilla/minion-skipfish-plugin/pull/13,mozilla,Python,Regex,bad smells,code smells,performance issues,,1,,,NO,838.6333334,2,9,1,NA
+614,https://github.com/mozilla/git-bz-moz,https://github.com/mozilla/git-bz-moz/pull/93,mozilla,Python,Other,other failures,,,1,,,,NO,2934.766666,1,23,1,NA
+616,https://github.com/mozilla/pdf.js,https://github.com/mozilla/pdf.js/pull/4504,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,6157.3,3,15273,207,NA
+623,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/67,mozilla,Python,Regex,incorrect behavior,T1 & T2,,2,14,7,,NO,1104.75,3,478,9,"1, 5, 6"
+625,https://github.com/mozilla/bugherder,https://github.com/mozilla/bugherder/pull/26,mozilla,JavaScript,API,bad smells,code smells,deprecated APIs,,,,6,NO,2768.566667,1,14,1,NA
+630,https://github.com/mozilla/brackets,https://github.com/mozilla/brackets/pull/255,mozilla,JavaScript,Regex,incorrect behavior,T1 & T2,,,1,,,NO,33.65000001,1,2,1,1
+636,https://github.com/mozilla/bleach,https://github.com/mozilla/bleach/pull/72,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,5419.316667,2,7,2,2
+637,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4944,mozilla,Python,Other,other failures,,,,,,1,YES,83.06666667,1,14,2,NA
+641,https://github.com/mozilla/mozmill-ci,https://github.com/mozilla/mozmill-ci/pull/58,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,107.45,1,4,1,NA
+644,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/2756,mozilla,Python,Other,new feature,data processing,,1,,,,YES,4392.916667,1,50,2,NA
+646,https://github.com/mozilla/readability,https://github.com/mozilla/readability/pull/32,mozilla,JavaScript,API,bad smells,code smells,performance/security,,,,10,NO,710.2833333,1,24,1,NA
+653,https://github.com/mozilla/normandy,https://github.com/mozilla/normandy/pull/1593,mozilla,Python,Regex,bad smells,code smells,regex representation,,1,,,NO,23.33333333,1,2,1,7
+656,https://github.com/mozilla/activity-stream,https://github.com/mozilla/activity-stream/pull/3290,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,125.3,2,66,2,4
+657,https://github.com/mozilla/popcorn-js,https://github.com/mozilla/popcorn-js/pull/12,mozilla,JavaScript,Regex,bad smells,code smells,unused/duplicated regex,,,1,,YES,4211.733334,4,30,2,3
+661,https://github.com/mozilla/remo,https://github.com/mozilla/remo/pull/45,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,0.099936,1,2,1,NA
+670,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1794,mozilla,JavaScript,Other,bad smells,,,,,1,,YES,33.18333333,1,22,5,NA
+671,https://github.com/mozilla/mozillians,https://github.com/mozilla/mozillians/pull/2356,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,167003.3834,2,2,1,NA
+679,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/2866,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,NO,7139.666667,1,42,2,NA
+681,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/199,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,4,,,YES,32.35,1,24,2,7
+682,https://github.com/mozilla/mozregression,https://github.com/mozilla/mozregression/pull/428,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,826.7333334,1,31,3,NA
+685,https://github.com/mozilla/standup,https://github.com/mozilla/standup/pull/443,mozilla,Python,API,bad smells,code smells,deprecated APIs,,,25,,NO,11665.5,21,380,20,NA
+691,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1884,mozilla,JavaScript,Other,new feature,regex configuration entry,,1,,,,YES,34.23333334,1,63,8,NA
+693,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/2129,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,1018.033333,1,8,1,NA
+699,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/90,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,2,1,,,YES,24,2,1479,4,6
+708,https://github.com/mozilla/minion-backend,https://github.com/mozilla/minion-backend/pull/46,mozilla,Python,Other,other failures,,,1,,,,YES,995.7,1,85,2,NA
+711,https://github.com/mozilla/pdf.js,https://github.com/mozilla/pdf.js/pull/8266,mozilla,JavaScript,Regex,bad smells,design smells,unnecessary regex,,,1,,YES,714.2666666,1,73,5,NA
+712,https://github.com/mozilla/popcorn.webmaker.org,https://github.com/mozilla/popcorn.webmaker.org/pull/541,mozilla,JavaScript,Regex,incorrect behavior,T1 & T2,,,2,,,NO,200.7333333,1,4,1,1
+714,https://github.com/mozilla/minion-frontend,https://github.com/mozilla/minion-frontend/pull/168,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,50281.81667,1,13,1,5
+715,https://github.com/mozilla/learning.mozilla.org,https://github.com/mozilla/learning.mozilla.org/pull/1911,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,1415.95,2,173,7,4
+717,https://github.com/mozilla/fx-share-addon,https://github.com/mozilla/fx-share-addon/pull/9,mozilla,JavaScript,Other,other failures,,,1,,,,NO,539.6499999,1,3,1,NA
+732,https://github.com/mozilla/openwebapps,https://github.com/mozilla/openwebapps/pull/93,mozilla,JavaScript,Other,other failures,,,1,,,,NO,537.6333334,1,4,1,NA
+733,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1543,mozilla,JavaScript,Other,new feature,data processing,,5,,,,YES,640.35,1,360,2,NA
+735,https://github.com/mozilla/fxa-content-server,https://github.com/mozilla/fxa-content-server/pull/3546,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,YES,4168.616666,1,136,4,"1, 10"
+738,https://github.com/mozilla/donate.mozilla.org,https://github.com/mozilla/donate.mozilla.org/pull/2025,mozilla,JavaScript,Regex,incorrect behavior,T1 & T2,,,,1,,NO,109.6833333,2,2,1,3
+750,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1933,mozilla,JavaScript,Regex,bad smells,code smells,unused/duplicated regex,,,1,,NO,95.11666667,1,49,3,NA
+755,https://github.com/mozilla/vtt.js,https://github.com/mozilla/vtt.js/pull/80,mozilla,JavaScript,Regex,incorrect behavior,T1 & T2,,,1,,,YES,11.61666667,1,636,114,NA
+771,https://github.com/mozilla/mozdownload,https://github.com/mozilla/mozdownload/pull/429,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,4,,,YES,53.85,4,63,3,NA
+775,https://github.com/mozilla/Snappy-Symbolication-Server,https://github.com/mozilla/Snappy-Symbolication-Server/pull/23,mozilla,Python,Regex,bad smells,design smells,unnecessary regex,,,1,,NO,10522.55,1,3,1,3
+779,https://github.com/mozilla/webmaker-profile-2,https://github.com/mozilla/webmaker-profile-2/pull/99,mozilla,JavaScript,Regex,compile errors,,,,1,,,NO,1.716666667,1,2,1,1
+780,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/439,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,88.55000001,1,4,1,1
+782,https://github.com/mozilla/hubs,https://github.com/mozilla/hubs/pull/457,mozilla,JavaScript,API,bad smells,code smells,performance/security,,,,7,NO,4249.616666,1,23,1,NA
+783,https://github.com/mozilla/pdf.js,https://github.com/mozilla/pdf.js/pull/7800,mozilla,JavaScript,Other,other failures,,,2,,,,NO,35.46666667,1,7,1,NA
+785,https://github.com/mozilla/mozregression,https://github.com/mozilla/mozregression/pull/100,mozilla,Python,Other,other failures,,,,1,,,NO,1847.05,1,12,2,NA
+786,https://github.com/mozilla/openbadges-backpack,https://github.com/mozilla/openbadges-backpack/pull/951,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,237.3,1,2,1,NA
+791,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/455,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,2,,1,YES,4746.9,1,18,2,NA
+795,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/181,mozilla,Python,Other,bad smells,,,3,2,,,YES,5768.866666,3,344,10,NA
+800,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/633,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,2,2,1,,YES,534.0166667,1,72,3,NA
+801,https://github.com/mozilla/mozillians,https://github.com/mozilla/mozillians/pull/1838,mozilla,Python,API,bad smells,code smells,performance/security,,,,1,NO,139.1,1,2,1,NA
+815,https://github.com/mozilla/bleach,https://github.com/mozilla/bleach/pull/417,mozilla,Python,Regex,bad smells,code smells,regex representation,,4,,,NO,5379.1,1,8,1,7
+832,https://github.com/mozilla/fxa-content-server,https://github.com/mozilla/fxa-content-server/pull/5892,mozilla,JavaScript,Regex,incorrect behavior,T1 & T2,,,1,,,NO,43.35,1,2,1,NA
+833,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/448,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,5,,1,YES,5890.666667,1,69,2,5
+842,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/334,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,19.35,1,8,3,NA
+844,https://github.com/mozilla/nunjucks,https://github.com/mozilla/nunjucks/pull/134,mozilla,JavaScript,Other,bad smells,,,1,,,,NO,20488.65,4,119,3,NA
+858,https://github.com/mozilla/bleach,https://github.com/mozilla/bleach/pull/61,mozilla,Python,Regex,bad smells,code smells,performance issues,,1,,1,YES,72136.1,2,36,2,NA
+859,https://github.com/mozilla/popcorn-js,https://github.com/mozilla/popcorn-js/pull/57,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,3087.15,3,41,2,4
+862,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1743,mozilla,JavaScript,Regex,bad smells,design smells,unnecessary regex,,,1,,YES,268.5500001,1,10,3,NA
+864,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1894,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,94.95,2,2,1,5
+866,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/14,mozilla,Python,Other,new feature,data processing,,9,,,,YES,7607.933333,1,31,2,NA
+871,https://github.com/mozilla/probe-scraper,https://github.com/mozilla/probe-scraper/pull/53,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,4.55,1,2,1,NA
+873,https://github.com/mozilla/donate.mozilla.org,https://github.com/mozilla/donate.mozilla.org/pull/118,mozilla,JavaScript,Regex,compile errors,,,,2,,,NO,35.75,1,4,1,NA
+879,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/893,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,114.2333333,1,3,2,NA
+897,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4204,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,16050.28333,4,335,2,5
+901,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/225,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,1,3,2,,YES,1417.216667,1,24,2,NA
+902,https://github.com/mozilla/fxa-content-server,https://github.com/mozilla/fxa-content-server/pull/1124,mozilla,JavaScript,Regex,bad smells,code smells,regex representation,,2,,,NA,225.8666667,1,4,1,2
+907,https://github.com/mozilla/mozillians,https://github.com/mozilla/mozillians/pull/1011,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,4,,,NO,712.7166666,1,8,1,2
+910,https://github.com/mozilla/mozdownload,https://github.com/mozilla/mozdownload/pull/139,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,1275.95,2,8,1,NA
+914,https://github.com/mozilla/thimble.mozilla.org,https://github.com/mozilla/thimble.mozilla.org/pull/408,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,1326.083333,1,8,2,NA
+915,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4607,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,959.3166666,1,17,1,2
+917,https://github.com/mozilla/nunjucks,https://github.com/mozilla/nunjucks/pull/637,mozilla,JavaScript,Regex,bad smells,design smells,other,,1,,,YES,1995.849999,1,13,4,NA
+922,https://github.com/mozilla/mozmill-ci,https://github.com/mozilla/mozmill-ci/pull/121,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,31,,,NA,112.8166667,1,186,31,NA
+925,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4446,mozilla,Python,Other,new feature,data processing,,5,,,,YES,5772.666666,4,129,9,NA
+931,https://github.com/mozilla/readability,https://github.com/mozilla/readability/pull/34,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,137.1333333,1,2,1,NA
+935,https://github.com/mozilla/zamboni,https://github.com/mozilla/zamboni/pull/442,mozilla,Python,Other,other failures,,,1,,,,NO,8487.549999,1,2,1,NA
+936,https://github.com/mozilla/fxa-content-server,https://github.com/mozilla/fxa-content-server/pull/6518,mozilla,JavaScript,Regex,bad smells,code smells,performance issues,,1,,,NO,545.8166667,1,4,2,NA
+942,https://github.com/mozilla/bugbug,https://github.com/mozilla/bugbug/pull/65,mozilla,Python,Other,new feature,data processing,,1,,,,YES,4127.866667,3,12,2,NA
+944,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/1392,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,959.7500001,1,5,2,2
+945,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/1507,mozilla,JavaScript,Regex,incorrect behavior,T1 & T2,,2,,2,1,YES,2979.166667,4,116,2,NA
+952,https://github.com/mozilla/source-map,https://github.com/mozilla/source-map/pull/152,mozilla,JavaScript,Regex,bad smells,design smells,unnecessary regex,,,1,,NO,1666.883333,1,14,1,3
+954,https://github.com/mozilla/fxa-auth-db-mysql,https://github.com/mozilla/fxa-auth-db-mysql/pull/425,mozilla,JavaScript,Other,other failures,,,1,,,,NO,2872.316667,1,10,1,NA
+955,https://github.com/mozilla/pdf.js,https://github.com/mozilla/pdf.js/pull/3763,mozilla,JavaScript,Regex,bad smells,code smells,unused/duplicated regex,,,2,,NO,5639.383333,1,112,2,3
+956,https://github.com/mozilla/fxa-content-server,https://github.com/mozilla/fxa-content-server/pull/5214,mozilla,JavaScript,Regex,bad smells,code smells,unused/duplicated regex,,,1,,YES,4025.600001,1,127,5,3
+960,https://github.com/mozilla/pontoon,https://github.com/mozilla/pontoon/pull/809,mozilla,Python,Other,new feature,regex-like implementation,,1,,,,YES,967.8666666,1,48,2,NA
+968,https://github.com/mozilla/source-map,https://github.com/mozilla/source-map/pull/116,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,6590.05,2,38,2,NA
+973,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4123,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,NO,68.4,1,6,1,3
+974,https://github.com/mozilla/nunjucks,https://github.com/mozilla/nunjucks/pull/279,mozilla,JavaScript,Other,new feature,regex-like implementation,,1,,,,YES,14583.48333,3,117,8,NA
+975,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/411,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,1,,,,YES,62.58333334,1,30,2,6
+980,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1558,mozilla,JavaScript,Other,other failures,,,1,,,,YES,376.1833333,1,105,2,NA
+987,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/827,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,2,,,NO,905.4999999,1,4,1,NA
+988,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/520,mozilla,Python,Regex,bad smells,code smells,performance issues,,2,,,NA,626.8,1,4,1,1
+990,https://github.com/mozilla/hubs,https://github.com/mozilla/hubs/pull/358,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,NO,43170.38333,11,26,3,NA
+993,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/224,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,1,1,,,YES,1450.716667,1,42,2,6
+1000,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/308,mozilla,Python,Other,bad smells,,,,,11,,NA,4123.633333,3,268,7,NA
+1006,https://github.com/mozilla/learning.mozilla.org,https://github.com/mozilla/learning.mozilla.org/pull/1064,mozilla,JavaScript,Other,new feature,data processing,,1,,,,NO,113.7166667,29,453,19,NA
+1011,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/157,mozilla,JavaScript,Regex,bad smells,code smells,unused/duplicated regex,1,,2,,YES,1253.866667,1,353,17,NA
+1013,https://github.com/mozilla/parquet2hive,https://github.com/mozilla/parquet2hive/pull/24,mozilla,Python,Other,new feature,regex configuration entry,,1,,,,YES,2603.533333,4,71,5,NA
+1014,https://github.com/mozilla/publish.webmaker.org,https://github.com/mozilla/publish.webmaker.org/pull/138,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,52.2,1,2,1,NA
+1026,https://github.com/mozilla/normandy,https://github.com/mozilla/normandy/pull/27,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,28.66666667,1,15,2,2
+1028,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/5049,mozilla,Python,Regex,bad smells,code smells,regex representation,,5,,,NA,64.08333333,1,85,9,7
+1037,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1290,mozilla,JavaScript,Other,bad smells,,,1,,,,YES,1318.6,3,159,3,NA
+1039,https://github.com/mozilla/experimenter,https://github.com/mozilla/experimenter/pull/422,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,3.416666666,1,2,1,NA
+1049,https://github.com/mozilla/potools,https://github.com/mozilla/potools/pull/13,mozilla,JavaScript,Regex,incorrect behavior,incorrect extraction,,4,1,,,YES,102.4,1,23,3,5
+1056,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/61,mozilla,Python,API,bad smells,code smells,unnecessary computation,,,,1,YES,589.05,3,86,8,10
+1060,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/2394,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,2,,1,,NO,2698.45,1,36,1,NA
+1063,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/619,mozilla,JavaScript,Other,new feature,data processing,,3,,,,YES,10078.71667,3,132,7,NA
+1069,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/60,mozilla,Python,API,bad smells,code smells,unnecessary computation,,,,4,YES,3432.883333,4,131914,52,10
+1069,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/60,mozilla,Python,Regex,bad smells,code smells,performance issues,1,2,,2,YES,3432.883333,4,131914,52,10
+1074,https://github.com/mozilla/zamboni,https://github.com/mozilla/zamboni/pull/378,mozilla,Python,Other,new feature,data processing,,1,,,,YES,128.6333333,1,65,3,NA
+1075,https://github.com/mozilla/bugbug,https://github.com/mozilla/bugbug/pull/96,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,1309.916667,2,4,2,NA
+1076,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/80,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,22449.51667,1,32,3,4
+1077,https://github.com/mozilla/activity-stream,https://github.com/mozilla/activity-stream/pull/2757,mozilla,JavaScript,Regex,bad smells,design smells,unnecessary regex,,,1,,NO,4359.433333,8,760,22,3
+1082,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/4133,mozilla,Python,Other,bad smells,,,,1,,,NO,1141.616667,1,16,2,NA
+1084,https://github.com/mozilla/mozdownload,https://github.com/mozilla/mozdownload/pull/472,mozilla,Python,Regex,bad smells,code smells,regex representation,,1,,,NA,53.11666666,1,2,1,7
+1085,https://github.com/mozilla/standup,https://github.com/mozilla/standup/pull/238,mozilla,Python,API,bad smells,code smells,exception handling,,,,5,NO,36.35000001,1,27,1,NA
+1087,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/344,mozilla,Python,API,incorrect computation,,,,,,1,YES,12.46666667,1,14,2,NA
+1089,https://github.com/mozilla/vtt.js,https://github.com/mozilla/vtt.js/pull/132,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,77.35,1,2,1,1
+1091,https://github.com/mozilla/sugardough,https://github.com/mozilla/sugardough/pull/85,mozilla,Python,Regex,incorrect behavior,T1 & T2,,,1,,,NO,3.016666666,1,2,1,NA
+1101,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/2578,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,2,,1,,YES,1305,4,187,2,NA
+1106,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/86,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,2,1,,,NO,345.3833333,2,11,1,6
+1113,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/198,mozilla,Python,API,incorrect computation,,,,1,,3,YES,2563.9,1,8,2,NA
+1116,https://github.com/mozilla/MozDef,https://github.com/mozilla/MozDef/pull/1054,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,14.71666667,1,2,1,5
+1129,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4830,mozilla,Python,Regex,bad smells,code smells,unused/duplicated regex,,,1,,YES,191.4,14,518,25,NA
+1130,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4064,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,8208.983333,1,28,2,NA
+1134,https://github.com/mozilla/webmaker-android,https://github.com/mozilla/webmaker-android/pull/643,mozilla,Java,Other,new feature,data processing,,1,,,,NA,172.65,5,292,26,NA
+1142,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/244,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,45.25,1,46,2,NA
+1143,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/1451,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,5,,,NO,4188.833333,7,4568,113,1
+1144,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/107,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,1,1,,,YES,11440.31667,1,11,2,NA
+1145,https://github.com/mozilla/contain-facebook,https://github.com/mozilla/contain-facebook/pull/44,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,1838.1,1,2,1,NA
+1152,https://github.com/mozilla/zest,https://github.com/mozilla/zest/pull/93,mozilla,Java,Other,new feature,regex-like implementation,,,1,,1,YES,81586.85,1,76,2,NA
+1154,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1484,mozilla,JavaScript,API,bad smells,code smells,unnecessary computation,,,,2,YES,83.36666667,1,441,8,9
+1155,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1909,mozilla,JavaScript,Other,other failures,,,3,2,,,YES,1178.016667,1,156,2,NA
+1162,https://github.com/mozilla/git-bz-moz,https://github.com/mozilla/git-bz-moz/pull/3,mozilla,Python,Other,new feature,data processing,,1,,,,NO,121.2666667,1,9,1,NA
+1163,https://github.com/mozilla/OpenWPM,https://github.com/mozilla/OpenWPM/pull/110,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,YES,395.2333333,1,112,8,3
+1164,https://github.com/mozilla/remo,https://github.com/mozilla/remo/pull/359,mozilla,Python,Other,new feature,data processing,,1,,,,NO,21608.63333,1,404,10,NA
+1167,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/4216,mozilla,Python,Other,bad smells,,,,,5,,NO,2742.6,1,6873,35,NA
+1167,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/4216,mozilla,Python,Regex,incorrect behavior,T1 & T2,,,1,,1,YES,2742.6,1,6873,35,NA
+1169,https://github.com/mozilla/fxa-auth-server,https://github.com/mozilla/fxa-auth-server/pull/1787,mozilla,JavaScript,Regex,bad smells,design smells,other,1,,,,YES,745.9166667,1,61,2,6
+1170,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/197,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,260.95,1,5,1,1
+1183,https://github.com/mozilla/pdf.js,https://github.com/mozilla/pdf.js/pull/9288,mozilla,JavaScript,Other,other failures,,,2,,,,YES,3429.516666,1,46,4,NA
+1187,https://github.com/mozilla/minion-frontend,https://github.com/mozilla/minion-frontend/pull/110,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,8622,2,2,1,NA
+1192,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/2134,mozilla,Python,Regex,incorrect behavior,T1 & T2,,,1,,,NO,9.283333333,1,2,1,NA
+1196,https://github.com/mozilla/addons-frontend,https://github.com/mozilla/addons-frontend/pull/6761,mozilla,JavaScript,Other,bad smells,,,,3,,,YES,5319.9,6,65,5,NA
+1198,https://github.com/mozilla/mozillians,https://github.com/mozilla/mozillians/pull/1558,mozilla,Python,Other,other failures,,,5,,,,NO,20216.46666,1,19,4,NA
+1199,https://github.com/mozilla/addons-linter,https://github.com/mozilla/addons-linter/pull/891,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,1,YES,312.9333333,1,12,2,NA
+1200,https://github.com/mozilla/persona,https://github.com/mozilla/persona/pull/2015,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,1822.233334,1,21,1,NA
+1201,https://github.com/mozilla/butter,https://github.com/mozilla/butter/pull/191,mozilla,JavaScript,Other,new feature,regex configuration entry,,3,,,,NO,0.5333333334,1,35,5,NA
+1213,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/913,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,1,NO,653.9666666,2,38,5,NA
+1228,https://github.com/mozilla/butter,https://github.com/mozilla/butter/pull/761,mozilla,JavaScript,API,bad smells,code smells,exception handling,,,,2,NO,1031.733333,1,13,1,8
+1232,https://github.com/mozilla/addons-server,https://github.com/mozilla/addons-server/pull/10352,mozilla,Python,API,bad smells,code smells,exception handling,,,,1,NO,804.4333334,2,5,1,NA
+1236,https://github.com/mozilla/morgothv1,https://github.com/mozilla/morgothv1/pull/14,mozilla,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,1,1,,,YES,83993.75001,4,25,4,"5, 6"
+1239,https://github.com/mozilla/fxa-password-strength-checker,https://github.com/mozilla/fxa-password-strength-checker/pull/29,mozilla,JavaScript,Regex,bad smells,design smells,other,2,,1,,YES,6719.366667,2,34,2,NA
+1245,https://github.com/mozilla/feedthefox,https://github.com/mozilla/feedthefox/pull/43,mozilla,Python,Regex,bad smells,code smells,unused/duplicated regex,,,1,,NO,1263.616667,1,7,1,NA
+1249,https://github.com/mozilla/addons-frontend,https://github.com/mozilla/addons-frontend/pull/7363,mozilla,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,49.91666666,1,25,2,NA
+1253,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4377,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,2800.416666,1,22,2,5
+1255,https://github.com/mozilla/amo-validator,https://github.com/mozilla/amo-validator/pull/320,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NA,11.83333333,1,4,1,NA
+1264,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/295,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,2673.566667,1,51,2,NA
+1275,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/3727,mozilla,Python,Other,other failures,,,1,,,,NO,5566.05,1,11,1,NA
+1281,https://github.com/mozilla/treeherder,https://github.com/mozilla/treeherder/pull/3347,mozilla,Python,Regex,bad smells,code smells,regex representation,1,1,,,YES,7065.766666,11,149,15,7
+1286,https://github.com/mozilla/normandy,https://github.com/mozilla/normandy/pull/869,mozilla,Python,Other,new feature,data processing,,,1,,,YES,8667.616667,2,58,5,NA
+1290,https://github.com/mozilla/pontoon,https://github.com/mozilla/pontoon/pull/908,mozilla,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,,1,,NO,798.4833333,3,22,1,4
+1299,https://github.com/mozilla/zamboni,https://github.com/mozilla/zamboni/pull/3095,mozilla,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,YES,940.1833333,1,10,2,NA
+1303,https://github.com/mozilla/kuma,https://github.com/mozilla/kuma/pull/4231,mozilla,Python,Other,bad smells,,,,14,,,YES,122264.0833,3,801,4,NA
+1308,https://github.com/google/grr,https://github.com/google/grr/pull/138,google,Python,API,bad smells,code smells,unnecessary computation,,1,,,NO,7852.8,1,2,1,NA
+1313,https://github.com/google/tie,https://github.com/google/tie/pull/649,google,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,130.2666667,6,20,2,NA
+1316,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/931,google,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,2,,,NO,1452.683333,2,4,2,NA
+1317,https://github.com/google/truth,https://github.com/google/truth/pull/81,google,Java,Other,new feature,regex-like implementation,,4,,,,YES,3975.666667,1,208,3,NA
+1321,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/6966,google,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,1,1,NO,8443.366667,2,18,2,5
+1324,https://github.com/google/caja,https://github.com/google/caja/pull/2026,google,Java,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,38.3,1,2,1,NA
+1328,https://github.com/google/blockly,https://github.com/google/blockly/pull/771,google,JavaScript,Other,new feature,data processing,,2,,,,NO,297.8666667,3,401,8,NA
+1329,https://github.com/google/ctfscoreboard,https://github.com/google/ctfscoreboard/pull/161,google,Python,Other,new feature,regex-like implementation,,,,,1,YES,2.799999999,1,35,3,NA
+1331,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/6771,google,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,,1,,NO,5378.65,1,3,1,3
+1338,https://github.com/google/error-prone,https://github.com/google/error-prone/pull/1159,google,Java,Other,new feature,data processing,,3,,,,NO,5745.766667,69,9940,235,NA
+1343,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/8278,google,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,,1,,NO,1081.35,2,180,2,3
+1346,https://github.com/google/grr,https://github.com/google/grr/pull/18,google,Python,Regex,compile errors,,,,2,,,NO,5122.65,1,4,1,NA
+1349,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/8199,google,Python,Regex,bad smells,code smells,regex representation,,6,,,NA,8564.55,1,12,6,1
+1359,https://github.com/google/bamboo-soy,https://github.com/google/bamboo-soy/pull/158,google,Java,Regex,incorrect behavior,incorrect extraction,,,2,,,NO,71.56666666,1,4,2,NA
+1365,https://github.com/google/ExoPlayer,https://github.com/google/ExoPlayer/pull/3185,google,Java,API,bad smells,code smells,exception handling,,,,2,NO,630.6,1,4,1,8
+1382,https://github.com/google/tie,https://github.com/google/tie/pull/378,google,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,30644.75,2,2,1,NA
+1385,https://github.com/google/ExoPlayer,https://github.com/google/ExoPlayer/pull/307,google,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,641.1333334,1,2,1,NA
+1390,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/47,google,Python,Other,new feature,data processing,,4,,,,NO,484.6333333,7,1033,26,NA
+1392,https://github.com/google/tie,https://github.com/google/tie/pull/387,google,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,1056.733333,2,2,1,NA
+1394,https://github.com/google/nsscache,https://github.com/google/nsscache/pull/80,google,Python,Other,new feature,regex configuration entry,,2,,,,NO,16627.58333,6,25,4,NA
+1398,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/1337,google,Python,Regex,incorrect behavior,T1 & T2,,,,9,,NO,96,1,14,3,4
+1401,https://github.com/google/ExoPlayer,https://github.com/google/ExoPlayer/pull/2547,google,Java,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,4863.833333,1,4,2,NA
+1408,https://github.com/google/blockly,https://github.com/google/blockly/pull/1050,google,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,1191.8,1,2,1,NA
+1409,https://github.com/google/blockly,https://github.com/google/blockly/pull/1433,google,JavaScript,Regex,bad smells,code smells,regex representation,,1,,,NO,208.8333333,1,2,1,NA
+1416,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/587,google,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,2,,,NO,1437.2,3,22,5,NA
+1418,https://github.com/google/citest,https://github.com/google/citest/pull/275,google,Python,Other,new feature,regex-like implementation,,1,,,,YES,118.2833333,1,24,3,NA
+1427,https://github.com/google/ctfscoreboard,https://github.com/google/ctfscoreboard/pull/160,google,Python,Other,new feature,regex-like implementation,,1,,,,YES,36.61666667,4,60,3,NA
+1431,https://github.com/google/grr,https://github.com/google/grr/pull/131,google,Python,Regex,bad smells,code smells,performance issues,,1,,,NO,8970.35,1,2,1,NA
+1433,https://github.com/google/openhtf,https://github.com/google/openhtf/pull/347,google,Python,Regex,bad smells,design smells,other,,6,,,NA,22576.88333,1,12,1,2
+1436,https://github.com/google/graphicsfuzz,https://github.com/google/graphicsfuzz/pull/167,google,Java,Regex,bad smells,design smells,unnecessary regex,,,1,,NO,123.8666667,1,72,6,3
+1437,https://github.com/google/python-fire,https://github.com/google/python-fire/pull/141,google,Python,Other,new feature,data processing,,1,,,,YES,27434.85,10,75,3,NA
+1446,https://github.com/google/openhtf,https://github.com/google/openhtf/pull/594,google,Python,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,YES,5.833333333,1,3,2,NA
+1448,https://github.com/google/grr,https://github.com/google/grr/pull/169,google,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,5264.3,1,2,1,NA
+1458,https://github.com/google/crmint,https://github.com/google/crmint/pull/61,google,Python,Regex,incorrect behavior,T1 & T2,,,2,,,NO,41636.51667,2,13,4,NA
+1465,https://github.com/google/ggrc-core,https://github.com/google/ggrc-core/pull/537,google,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,,,1,NO,4212.45,1,2,1,NA
+1468,https://github.com/google/blockly,https://github.com/google/blockly/pull/700,google,JavaScript,API,incorrect computation,,,,,,1,NO,76766.76667,3,23,3,NA
+1478,https://github.com/facebook/fbjs,https://github.com/facebook/fbjs/pull/12,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,36.48333334,1,2,1,NA
+1483,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1452,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,31.43333333,1,82,6,NA
+1489,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/3362,facebook,JavaScript,Other,bad smells,,,,1,,,YES,5934.933333,8,100,7,NA
+1493,https://github.com/facebook/react,https://github.com/facebook/react/pull/344,facebook,JavaScript,Other,other failures,,,1,,,,NO,18.61666667,1,5,1,NA
+1497,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1574,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,508.9333333,1,2,1,2
+1498,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/5431,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,8.866666666,2,4,1,NA
+1510,https://github.com/facebook/Docusaurus,https://github.com/facebook/Docusaurus/pull/854,facebook,JavaScript,API,bad smells,code smells,unnecessary computation,2,2,,6,YES,1121.333333,11,584,13,10
+1514,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/5941,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,2205.65,1,11,4,1
+1515,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2741,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,545.5833333,1,7,1,NA
+1518,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/3686,facebook,JavaScript,Regex,compile errors,,,,1,,,NO,255.45,4,7,1,NA
+1519,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1723,facebook,JavaScript,API,incorrect computation,,,1,,,1,YES,459.3166667,3,17,2,8
+1523,https://github.com/facebook/chisel,https://github.com/facebook/chisel/pull/58,facebook,Python,Other,other failures,,,,1,,4,NO,18619.61666,4,28,1,NA
+1526,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/4464,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,YES,160.9,1,28,2,2
+1527,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/5230,facebook,JavaScript,Regex,incorrect behavior,T1 & T2,,,,1,,YES,317.4666667,1,144,4,3
+1529,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/5464,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,YES,25.95,1,21,2,NA
+1534,https://github.com/facebook/planout,https://github.com/facebook/planout/pull/81,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,NO,46.1,2,4,2,NA
+1537,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2482,facebook,JavaScript,Other,other failures,,,8,,3,,YES,39945.03333,2,758,22,NA
+1540,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/3001,facebook,JavaScript,API,incorrect computation,,,,,,1,NO,7.566666667,1,4,1,NA
+1542,https://github.com/facebook/react,https://github.com/facebook/react/pull/6804,facebook,JavaScript,Other,other failures,,,1,,,,YES,2230.816667,2,42,3,NA
+1543,https://github.com/facebook/Docusaurus,https://github.com/facebook/Docusaurus/pull/1154,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,534.3666667,1,2,1,NA
+1547,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/6579,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,5516.533333,3,43,4,NA
+1549,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2264,facebook,JavaScript,Other,other failures,,,1,,,,NO,3976.766667,1,7,1,NA
+1551,https://github.com/facebook/prepack,https://github.com/facebook/prepack/pull/645,facebook,JavaScript,API,bad smells,design smells,alternative regex API,,,,1,YES,179.8666667,1,33,2,NA
+1563,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2540,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,126.1666667,1,6,1,1
+1566,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/4578,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,,,1,YES,12.05,1,27,4,NA
+1567,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1733,facebook,JavaScript,Other,new feature,regex configuration entry,,1,,,,YES,3049.566667,3,58,7,NA
+1571,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/2326,facebook,JavaScript,Regex,bad smells,code smells,unused/duplicated regex,,,1,,NO,61.08333333,1,24,3,4
+1578,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/22,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,95.03333333,1,2,1,NA
+1587,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/4576,facebook,JavaScript,Regex,incorrect behavior,incorrect extraction,,2,1,2,1,YES,216.1666666,1,23,2,NA
+1593,https://github.com/facebook/FAI-PEP,https://github.com/facebook/FAI-PEP/pull/4,facebook,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,2768.35,5,4,1,2
+1595,https://github.com/facebook/chisel,https://github.com/facebook/chisel/pull/32,facebook,Python,API,bad smells,code smells,exception handling,,,,1,NO,3547.2,1,17,1,NA
+1598,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1463,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,1,1,,,NO,12055.08333,1,25,4,NA
+1598,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1463,facebook,JavaScript,Regex,incorrect behavior,T1 & T2,,,1,,,NO,12055.08333,1,25,4,NA
+1599,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/5058,facebook,JavaScript,Other,new feature,regex configuration entry,,1,,,,NO,114.3333333,1,99,4,NA
+1603,https://github.com/facebook/Docusaurus,https://github.com/facebook/Docusaurus/pull/412,facebook,JavaScript,Regex,incorrect behavior,incorrect extraction,,,1,,,NO,793.4666666,1,3,1,NA
+1605,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1379,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,6089.116667,4,39,4,NA
+1606,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/7029,facebook,JavaScript,Regex,incorrect behavior,T1 & T2,,,1,,,YES,132.0666667,1,6,2,NA
+1608,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/4558,facebook,JavaScript,Other,other failures,,,,1,,1,YES,24.61666667,1,56,3,NA
+1610,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/5269,facebook,JavaScript,Regex,incorrect behavior,T1 & T2,,2,1,,,YES,802.5166666,1,260,5,NA
+1614,https://github.com/facebook/react,https://github.com/facebook/react/pull/7497,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,6013.916667,1,88,22,2
+1623,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/4686,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NA,197.7666667,1,2,1,NA
+1624,https://github.com/facebook/prepack,https://github.com/facebook/prepack/pull/582,facebook,JavaScript,API,bad smells,design smells,alternative regex API,,,,1,YES,35.85,1,29,2,NA
+1625,https://github.com/facebook/Docusaurus,https://github.com/facebook/Docusaurus/pull/799,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,1,3,,,YES,7055.283334,11,264,3,NA
+1630,https://github.com/facebook/chisel,https://github.com/facebook/chisel/pull/99,facebook,Python,Regex,incorrect behavior,incorrect extraction,,,1,,,NO,150610.7834,1,2,1,NA
+1632,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2852,facebook,JavaScript,Other,other failures,,,1,1,,,YES,885.1166667,3,24,3,NA
+1634,https://github.com/facebook/PathPicker,https://github.com/facebook/PathPicker/pull/283,facebook,Python,Regex,incorrect behavior,incorrect extraction,,1,,,,YES,2093.816667,1,30,5,6
+1635,https://github.com/facebook/PathPicker,https://github.com/facebook/PathPicker/pull/132,facebook,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,YES,0.9666666667,1,21,3,2
+1637,https://github.com/facebook/Docusaurus,https://github.com/facebook/Docusaurus/pull/795,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,2,,,YES,926.0000001,5,89,3,NA
+1638,https://github.com/facebook/react,https://github.com/facebook/react/pull/5614,facebook,JavaScript,Regex,compile errors,,,,1,,1,NO,394.0333334,1,4,1,NA
+1639,https://github.com/facebook/draft-js,https://github.com/facebook/draft-js/pull/514,facebook,JavaScript,Regex,incorrect behavior,unknown,,,1,,,NO,1381.75,1,2,1,NA
+1640,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2211,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,YES,14260.55,1,85,8,NA
+1641,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1189,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,NO,2745.066666,1,4,2,NA
+1646,https://github.com/facebook/react-devtools,https://github.com/facebook/react-devtools/pull/641,facebook,JavaScript,API,bad smells,code smells,exception handling,,,,2,NO,875.95,20,642,13,NA
+1646,https://github.com/facebook/react-devtools,https://github.com/facebook/react-devtools/pull/641,facebook,JavaScript,Other,new feature,regex configuration entry,,1,,,,NO,875.95,20,642,13,NA
+1648,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/1149,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,1,,,NO,12.96666667,1,2,1,NA
+1655,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/4680,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,1,,,NO,265.5666667,1,2,1,NA
+1658,https://github.com/facebook/react-devtools,https://github.com/facebook/react-devtools/pull/254,facebook,JavaScript,Regex,incorrect behavior,accepting invalid strings (T2),,,6,,,NO,8.366666666,1,37,6,NA
+1660,https://github.com/facebook/Docusaurus,https://github.com/facebook/Docusaurus/pull/739,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,NO,2.216666667,1,4,1,NA
+1663,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/6442,facebook,JavaScript,Other,new feature,data processing,,1,,,,YES,12604.46667,8,1123,31,NA
+1667,https://github.com/facebook/create-react-app,https://github.com/facebook/create-react-app/pull/2285,facebook,JavaScript,Other,new feature,data processing,,6,,,,YES,348770.9834,5,205,10,NA
+1672,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/1969,facebook,JavaScript,Regex,compile errors,,,,2,,1,NO,3892.083333,1,9,1,NA
+1673,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/5224,facebook,JavaScript,Regex,incorrect behavior,rejecting valid strings (T1),,1,,,,YES,3624.633333,3,39,6,NA
+1674,https://github.com/facebook/PathPicker,https://github.com/facebook/PathPicker/pull/54,facebook,Python,Regex,incorrect behavior,rejecting valid strings (T1),,,2,,,YES,364.95,2,14,2,2
+1675,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/6650,facebook,JavaScript,Other,other failures,,,1,,,,YES,282520.1834,38,175,21,NA
+1676,https://github.com/facebook/react,https://github.com/facebook/react/pull/4447,facebook,JavaScript,API,bad smells,code smells,unnecessary computation,,,,1,NO,6.783333333,1,4,1,9
+1677,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/7385,facebook,JavaScript,Regex,incorrect behavior,T1 & T2,,4,,5,,YES,121.6333333,6,524,6,NA
+1685,https://github.com/facebook/jest,https://github.com/facebook/jest/pull/2621,facebook,JavaScript,Other,new feature,regex-like implementation,,,,,1,YES,2184.733333,4,317,7,NA
+1694,https://github.com/facebook/react,https://github.com/facebook/react/pull/4787,facebook,JavaScript,Regex,bad smells,code smells,regex representation,,1,,,NO,1140.783333,1,2,1,NA
