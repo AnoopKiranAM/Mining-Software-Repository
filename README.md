@@ -12,8 +12,9 @@ Hardware: Windows, Mac or Linux operating system. Good and fast processor.
 Software: Anaconda, Python(pip install the required libraries mentioned below), Microsoft Excel.
 
 ## Process: 
-Steps: 
+### Steps: 
 Step 1: Install below third party libraries using below commands.
+
 •	Install python 3.7.4 (in Mac)
 •	Install numpy 1.17.2 (pip install numpy==1.17.2)
 •	Install pandas 0.25.1 (pip install pandas==0.25.1)
