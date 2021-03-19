@@ -1,7 +1,12 @@
 # Mining-Software-Repository
 
 ## Baseline
-The following parts are taken from assignment 2: This is a re-creation project of the original paper. “ An empirical study on Regular Expression Bugs” as a part of a course research “Mining Software Repositories (MSR 2020-21)” provided by Softlang Team at Universität Koblenz-Landau. -Anoop Kiran Angadi Manjunatha, Anirudh Kudaragundi Anand Rao.
+The following parts are taken from assignment 2: 
+
+This is a re-creation project of the original paper. “ An empirical study on Regular Expression Bugs” as a part of a course research “Mining Software Repositories (MSR 2020-21)” provided by Softlang Team at Universität Koblenz-Landau. 
+
+Done By:
+-Anoop Kiran Angadi Manjunatha(219203384), Anirudh Kudaragundi Anand Rao.
 
 ## MetaData
 This project describes the reproduction of the research paper “ An empirical study on Regular Expression Bugs” authored by: Peipei Wang, Chris Brown, Jamie A.Jennings, Kathryn T.Stolee.

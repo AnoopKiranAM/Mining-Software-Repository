@@ -1,0 +1,586 @@
+,title,comment,num_commits,files_changed,code_churn,Root Cause,Manifestation,Category
+0,"
+        Removed unnecessary regex escaping
+      ","
+This may not be the best way to solve this, but the normal use only involves _ and it gets escaped to _ so the datastore is unable to optimize against using a regex since ultimately the whole query becomes the full attribute and not a regex at all.  This changes the queries for even a 1hr window from multiple 5+ second queries all queries being sub 1s.
+.",1,1,2,regEx,bad smell,code smells
+1,"
+        Allowed regex to be tolerant of the empty string.
+      ","
+
+No description provided.
+
+.",6,2,20,regEx,incorrect behavior,rejecting valid strings (T1)
+2,,,0,0,0,Other,other failure, 
+3,"
+        Add regex matching to StringSubject (and omit from GWT).
+      ","
+
+No description provided.
+
+.",1,3,208,regEx,new feature,regex like implementation
+4,,,0,0,0,Other,other failure, 
+5,"
+        Fix capitalization in the safeEntityNameRe regex
+      ","
+
+No description provided.
+
+.",1,1,2,regEx,other failure,accepting invalid strings(T2)
+6,"
+        Split the scrollbar and flyout out into their own SVG elements. They
+      ","
+are siblings of the workpsace SVG.  This paves the way to make performance
+improvements to workspace dragging.
+Note that this is very close to what's in the develop-drag-surface-ws-drag branch.  Main difference is:
+
+Changed to using translate() instead of translate3d to position the flyout and scrollbars since it is more compatible cross browser and there isn't much of perf gain there anyway.  That means I had to alter the regex code a bit in getRelativeXY
+
+.",3,8,401,regEx,other failure,data processing
+7,"
+        Add a case-insensitive regex check.
+      ","
+
+No description provided.
+
+.",1,3,35,regEx,new feature, 
+8,,,0,0,0,Other,other failure, 
+9,"
+        Moe Sync
+      ","
+This code has been reviewed and submitted internally. Feel free to discuss on the PR and we can submit follow-up changes as necessary.
+Commits:
+ Remove unnecessary name check
+This should already be guaranteed by the getSymbolsByName method
+RELNOTES: n/a
+7a46409
+
+ Miscellaneous cleanups
+RELNOTES: N/A
+97c6e51
+
+ Fix a bug in the NoAllocationChecker that occurs when calling generic methods. The isAssignable check fails against generic parameters, so limit the varargs boxing check to only happen when the parameter is actually a varargs parameter, instead of just applying the assignability check all the time.
+RELNOTES: Fix for how NoAllocationChecker handles generic methods.
+77d7046
+
+ Nullness inference improvements to fix results for calls to non-generic methods:
+- don't propagate constraints from arguments to method results
+- derive inference results more like javac, to find results more often
+Generic method calls where actual types have type parameters can now sometimes not have an inference result, but previously those results came from propagation from arguments to results, which can in general lead to wrong results
+4ab41fb
+
+ Add a regression test for b/112275411
+RELNOTES: N/A
+1d92ce5
+
+ Interleave scanning for closed locks in LockNotBeforeTry
+instead of scanning the try/finally and direct cases as two separate
+passes. Also check for re-opening the same lock, and don't move the
+first acquisition down to the second acquisition's release.
+RELNOTES: N/A
+a32b624
+
+ Add parameter names in comments to fix ArgumentSelectionDefectChecker warning
+RELNOTES: N/A
+411abde
+
+ Add a regression test for b/116048042
+RELNOTES: N/A
+86ce344
+
+ Suppress EqualsGetClass in Bindings.Key
+RELNOTES: N/A
+c0240d1
+
+ Avoid suggesting a fix for @annotations within {@code } tags:
+  {@code
+@override
+    public void foo();
+  }
+I can't find any way to escape an annotation within a {@code } tag. {@literal @} will be rendered exactly as written, as will @.
+Perhaps the only answer is to use  and manually escape any HTML entities within the code block so that {@literal @} can be used?
+RELNOTES: N/A
+2bca96f6422be4f1b9848cafb63adfa7f9027020
+
+ Add a pattern for Javadocs missing a summary line.
+A summary line is required by the style guide on any public/protected Javadocs.
+RELNOTES: Add Javadoc check for missing summary lines.
+73002d79c78b4db45ceed26dbc1b46f6ec50d2e2
+
+ Update example version numbers
+RELNOTES: N/A
+00f1937eabb5b9f18939d9fca51a5a1bf4bd65c7
+
+ Change the DateFormatConstant bug checker to rename variable to lowerCamelCase when making a thread local suggestion.
+ThreadLocal<java.text.DateFormat> is still mutable so constant casing seems wrong here.
+RELNOTES:Change the DateFormatConstant bug checker to rename variable to lowerCamelCase when making a thread local suggestion.
+02082476dd6091318102cfcc9dddfa35227896db
+
+ Change the semantics of the flags in ProtoFieldNullComparison.
+RELNOTES: N/A
+4bd8da92328918b9eb4f8b6aa020a729c43692c0
+
+ Make the type check in OverrideThrowableToString more robust.
+Also simplify the fix generation, and don't emit a suggestion if the class overrides both (that doesn't seem erroneous to me).
+RELNOTES: Fixes in OverrideThrowableToString.
+a8ba6a97651c9b9a9f8e2647f2970d49f9a5a62a
+
+ Remove requireNonNull in LockNotBeforeTry.
+RELNOTES: N/A
+72ed919e0968cc9c3bb4bfb35016ec044967ac41
+
+ Fix NullPointerExceptions in Nullable Dereference. Fixes #1138.
+Turns out that the crash was caused by static field imports -- they are JCFieldAccesses without a symbol.
+RELNOTES: N/A
+c15f7c546626709fd8945c219b097c909e7922f9
+
+ Add @contact and @team to KNOWN_OTHER_TAGS.
+RELNOTES: N/A
+554612a45816f280691e227e7aa74ef3c6f9ecb8
+
+ Implement ErrorProne checker to disallow usage of org.mockito.internal.*
+Per mockito/mockito#80 (comment), we
+(the Mockito core team where I am a member of) do not support any usages of
+org.mockito.internal.* To that end, we are free to change/add/remove any
+methods/classes/interfaces in these packages.
+Therefore, I propose we write an ErrorProne check that prohibits the usage
+of such classes, as well as gradually remove all of these imports. This
+should then greatly ease the process of upgrading Mockito to 2.*
+fed4399b344a474ee2749497af760d9592fb4622
+
+ Open-source a number of checks related to dealing with time-related bugs.
+RELNOTES: Add a number of static analysis checks around appropriate
+use of java.time and org.joda.time classes - APIs that are unclear,
+don't do what most people expect, or are otherwise easy to trip on.
+9f0513c081aa5cfaffe16e5a1e49a42364923592
+
+ Document the -XepOpt:MissingOverride:IgnoreInterfaceOverrides option
+Fixes #1141
+175069961b8dc9521f5b37f962dfa1b09968e9c9
+
+ Miscellaneous cleanups
+RELNOTES: N/A
+4206bfe5150f72518fcfb8c3636e67b23c855353
+
+ Add assertThrows fix to MissingFail, using logic from TryFailRefactoring.
+RELNOTES:N/A
+30957a8fdea7bc398897ba35d0b214dd9bc74cc3
+
+ Add MEMBER_REFERENCE to switch of Kinds not requiring parens.
+RELNOTES: N/A
+ca4dc2cdeb81e0c07ebd0bbfa85d8016046a1337
+
+ Pull out common tags in InvalidTag, and add apiNote/implSpec/implNote as custom tags.
+These seem not to be elevated to being canonical tags at this point, so this seems like the right home.
+RELNOTES: Add java8 tags to InvalidTag.
+6dfbd12acb19d575b9ed109a133fdd12b3b34224
+
+ Fix incorrect @throws documentation on Description.Builder classes.
+RELNOTES: n/a
+91041f662e2f7502258e611fed62d78062c393a2
+
+ Fix crash in TimeUnitConversionChecker when run directly on java.util.concurrent.TimeUnit
+RELNOTES: n/a
+2eb72f4d278c21752233d33a13e37913f2751843
+
+ Don't crash when @DoNotCall isn't on the classpath
+Fixes #1131
+RELNOTES: N/A
+9a3b2382e6f45737666b45f4ca4d6d075115d775
+
+ Fix a few issues with the MutableMethodReturnType checker where the checker would crash on certain methods.
+See test file for added regression tests with examples.
+RELNOTES: Fix a few issues with the MutableMethodReturnType checker where the checker would crash on certain methods.
+6019e60957d32d893da7fe2bb3472315d42c8870
+
+ Fix typo to unblock documentation generation job.
+3db44776a07d1ac0884d63eafcf9816c05825059
+
+ Update docs for @Matches to say that it should _only_ go on the @BeforeTemplate.
+RELNOTES: update @Matches docs
+aa8a4769649db741984ba035a08643733a722d2f
+
+ Add some sanity checks around source offsets in ParameterName
+check
+Fixes #1135
+RELNOTES: none
+1a86e9919c488bb503515ed89b8f3762b73550f0
+
+ First attempt at a new treatise on why getClass() in equals() is wrong wrong wrong.
+Fixes #1144
+1b44e51150e170dfbe8fb32ccc3642a264439c73
+
+ Include the typeStr in the exception message thrown by VisitorState.getTypeFromString()
+RELNOTES: Include the typeStr in the exception message thrown by VisitorState.getTypeFromString()
+8e3e5a5eb0d67571c20ea6abc332fb3262f76b56
+
+ Fix false positives for JUnit's Theories runner. Treat @Theory and any other JUnit annotations as test annotations.
+RELNOTES: N/A
+31e4da3aecccdb377222f873c55a21591c5011a5
+
+ Add a pattern for unescaped entities in Javadocs, as well as generic type parameters.
+We regex match for stuff that looks a bit like Type<A, B>. If it's inside a /, we suggest wrapping that entire block with {@code } unless it has annotations in it (which then can't be escaped) or already escaped some HTML.
+RELNOTES: Catch unescaped entities in Javadocs.
+5e97091b81dc55bb30e9dd863e89fceaad7dca03
+
+ Add ASTHelpers.getFileName(CompilationUnitTree). All usages of getFileNameFromUri in Google use the URI directly from the CompilationUnitTree, and it's easier to find than needing to know a URI is accessible from the JavaFileObject.
+RELNOTES: n/a
+6f9448548796731ab1e3aa57fbda8bcc25c3658f
+
+ Add new bugchecker for static final fields with type mutability inconsistent with the name casing as per java-style
+Finds and fixes constant case naming violations for static final variables when we're certain that the field type is mutable or immutable, respectively.
+Fixes are suggested roughly using the following heuristic, which attempts to match the supposed most common intent, and only for private fields:
+
+If the field type is determined to be immutable, and the casing is not UPPER_SNAKE_CASE, we rename it to be UPPER_SNAKE_CASE.
+If the field type is determined to be mutable, and the casing is UPPER_SNAKE_CASE, we do the following:
+
+If the field type is a collection, and not modified in the compiliation unit where it's defined, we try to make it immutable. If it is modified, we rename it.
+If the field type is mutable proto2, we use the heuristic that it's not mutable if the field name is equal to IMMUTABLE_DEFAULT_INSTANCE (which is most likely frozen), and don't rename in that case. Otherwise we rename to lowerCamelCase.
+In the remaining cases, we rename to lowerCamelCase.
+
+
+
+RELNOTES: Add new bugchecker for static final fields with type mutability inconsistent with the name casing of Google's style guide
+7cdb6303d331d38ce0a86a7ca95ce6567e6dc83f
+
+ Stop the Xplugin integration from infinitely recursing into compilesWithFix
+RELNOTES: N/A
+28a8668d9a4a3a5527eb1f9d7e84537dc03e7050
+
+ Fix public test failures:
+* Update JavaTimeDefaultTimeZone's behavior to suggest adding ZoneId.systemDefault()
+* Update version of Mockito used so that MockitoInternalUsage works
+* Remove compiled protos from test sources as they don't work in maven at the
+   moment
+RELNOTES: n/a
+24a125b3b05bbb40f3d1112670cf6ec23f6979e3
+
+ Add details about suppression to Unused's documentation.
+RELNOTES: N/A
+cd61727d63889d3aab6a7f7bc4313546ccf21679
+
+ Disallow null for BugChecker descriptions.
+RELNOTES: Disallow null for BugChecker descriptions.
+a68f010e0bb861e36758de584f5ce51d253bd208
+
+ Update the NoAllocationChecker to require the annotation be propagated to all
+overrides of a method that has the annotation.
+RELNOTES: The NoAllocationChecker now requires the @NoAllocation annotation to be propagated to all overrides of a method that has the annotation, to reflect the contractual nature of the annotation.
+663d7a329b6cf70685ee8034afdaa6ea7413c0f5
+
+ Add null check to IntLongMath to prevent NullPointerException.
+RELNOTES: N/A
+9d73c5eb914f705163de049cb44e63cac537a08c
+
+ Whitelist CompletableFuture#exceptionally in FutureReturnValueIgnored
+Fixes #1154
+RELNOTES: N/A
+9ee12ef308c439743eaad76111af595f939d9ecc
+
+ Make CollectionToArraySafeParameter an error
+RELNOTES: CollectionToArraySafeParameter is now an error
+7ffc3423cff1e4e5dbc4d5546106da41d5027339
+
+ use nullness inference for all methods that return a generic type parameter
+this allows using inference results for class-level type parameters, which helps in situations where those type parameters never appear in source code, e.g., in expressions like methodThatReturnsNonnullMap().get(""key"")
+f77627caa67b9e0672e6415e8288ae4ec2ebef02
+
+ Fix a crash in LockNotBeforeTry
+getReceiver rejects non-invocation ExpressionTrees
+RELNOTES: N/A
+e93490784ea9bcac7c3962c6322151a29feaa127
+
+ Make Unused more clever about which comments to delete.
+RELNOTES: N/A
+ec8a4b2af10443108a66e010b5a1630faea27114
+
+ Improve AutoValueFinalMethods check
+- Add more specific diagnostic instead of listing all 3 methods
+- Flag at first matched method instead of class
+- add sanity test for @Memoized abstract method
+RELNOTES: Improve AutoValueFinalMethods check by adding more specific diagnostic at first matched method.
+7797f703eac9eaf0fc899ec2686270c686fe67e0
+
+ Add test for Diagnostic String with multiple method matches for AutoValueFinalMethods check
+RELNOTES: N/A
+e05eaa56c99cb44e6c82162fd657c9d964cd4631
+
+ Avoid calling getAnnotation in VisibleForTestingMisused
+and consolidate utilities for accessing annotations via the mirror API.
+RELNOTES: N/A
+fc961b490bef85f2e3f74eeff725949f544dd732
+
+ Work around b/118437729
+RELNOTES: N/A
+893ccba9c48e08cfe7335aaf54dd27c5cbf9840f
+
+ Deprecate ASTHelpers#getAnnotation
+RELNOTES: N/A
+013e2e3e70a9c556917f46cc5dd43e2b8b972497
+
+ Don't flag java.lang.Object in EqualsHashCode check
+RELNOTES: Don't flag java.lang.Object in EqualsHashCode check
+eebf07515fb792ec7482813d3065b0db10d3562b
+
+ Fix SwitchDefault suggested fix handling
+RELNOTES: N/A
+8b69bb000f4de8b40e927a225fd8131471e6de23
+
+ Handle varargs parameters with no corresponding formals in Unused
+RELNOTES: N/A
+354f565bb505293ccddeb192c72fb4341c57cfba
+
+ Fix a CCE in TruthAssertExpected
+RELNOTES: N/A
+20d7285ab5d69430505e6e236b1181071197e1eb
+
+ Fix an NPE in JavaDurationGetSecondsGetNano
+RELNOTES: N/A
+9373b6b9a15130f82aa9720daef7c8bf69016a3e
+
+ Fix an NPE
+RELNOTES: N/A
+87d715e290813fb41a470bc159ad8b19f9951afd
+
+ Confirm that by default, MethodCanBeStatic only reports one finding for multiple fixes.
+I don't see any coverage for this; the tests would have passed if it generated one per method.
+RELNOTES: N/A
+40bf3c00ff11bf37ef4ff4c030f4d7807855bdf1
+
+ Fix an NPE in EqualsGetClass.
+RELNOTES: N/A
+c8e07b3e7eddbcbaf0944eb21c7dd8f5245d162d
+
+ Fix a SIOOBE in Unused.
+This occurs from confusing source positions when ""int a, b;"" is desugared into ""int a; int b;"".
+RELNOTES: N/A
+1a62b6fc4078c2b658b24dbe608cf65360d16787
+
+ Fix some brittle assumptions in MissingFail
+RELNOTES: N/A
+1174ad0d0ba7287ecec7d5dbc8f1c8f39d18db28
+
+ Fix a crash in DefaultCharset
+if ByteString#copyFrom is called without a receiver.
+RELNOTES: N/A
+f7837f64856bec816739a803bba9f21366123e9b
+
+ Handle type attributes on class declarations
+RELNOTES: N/A
+036f805700572f417005a608973a170a46a1610b
+
+ Fix a crash in LockNotBeforeTry
+RELNOTES: N/A
+174e29c8d73d3a4a1078d47376f7fa74737a6537
+
+ In TestExceptionChecker, don't crash on empty methods
+RELNOTES: N/A
+1896778d4141318b5323a5e88d6a391fd63855ff
+
+ Fix a bug in ThreadSafety where not all type parameters at a method call are instantiated.
+RELNOTES: none
+31408892cadcbdae2359493b42ebd41c31881a7b
+.",69,235,9940,regEx,new feature,bad smells
+10,,,0,0,0,Other,other failure, 
+11,"
+        MySQL does not support ? in regex
+      ","
+
+No description provided.
+
+.",1,1,4,regEx,compile error, 
+12,,,0,0,0,Other,other failure, 
+13,"
+        Non-greedy regex for matching HTML comments
+      ","
+Fixes #151
+.",1,2,4,regEx,incorrect behavior,incorrect extraction
+14,"
+        Fix possible subrip timing line NPE
+      ","
+Fixes a possible NPE when reading the subrips timing line. We've had this occur for multiple users. Most likely due to corrupt srts, but would prefer the subs to just not appear in this scenario.
+Not sure of your style guide (re: ternary operators), but figured it was tidier to reuse the ""matches"" check as in both scenarios the timing line is ""invalid"".
+Error seen in the wild (trimmed) is:
+Fatal Exception: java.lang.NullPointerException: Attempt to invoke interface method 'int java.lang.CharSequence.length()' on a null object reference  
+       at java.util.regex.Matcher.reset(Matcher.java:995)  
+       at java.util.regex.Matcher.<init>(Matcher.java:174)  
+       at java.util.regex.Pattern.matcher(Pattern.java:1006)  
+       at com.google.android.exoplayer2.text.subrip.SubripDecoder.decode(SubripDecoder.java:72)
+
+.",1,1,4,regEx,bad smell,code smells
+15,"
+        Fix AttributeError Regex Bug
+      ","
+
+Adjusted AttributeError regex for when error names an attribute that includes non-word characters
+
+To test:
+
+Before importing changes, try using a length method or property for a string
+Note that an error is thrown because found variable is null
+Import changes and now no error should be thrown
+
+.",2,0,0,regEx,incorrect behavior,rejecting valid strings (T1)
+16,"
+        Issue with regular expression for CODEC attribute
+      ","
+Previous regular expression for extracting codec information was wrong,
+given a line that defines a variant it added information from “CODEC=“
+text to the end of the line (including also information about
+RESOLUTION or alternate rendition groups as part of the CODEC field).
+This is not causing a functional problem (at least known by me)
+although is making codecs field storing information that is not related
+with the codec.
+.",1,0,0,regEx,new feature,rejecting valid strings (T1)
+17,,,0,0,0,Other,other failure, 
+18,"
+        Fix Java Comment RegEx Bug
+      ","
+
+Fixed bug where the ZeroDivisionError would get blocked by the Java Comment Regex for Wrong Language Syntax Detection
+
+.",2,1,2,Other,incorrect behavior,accepting invalid strings(T2)
+19,"
+        Add support for suffix after mount point for autofs 
+      ","
+This adds the ability to modify the suffix after the mount point.
+This introduces two new options in the configuration: suffix and prefix
+prefix: A regular expression to capture a prefix, or mount point.
+suffix: A regular expression to modify the prefix.
+If you have :ufs-33-a.i
+This allows you to easily change the suffix: ufs-33-a.ib
+The config file for this operation would look something like this:
+[suffix]
+suffix_base = """"
+suffix = """"
+I used ConfigParser inside files.py, but I am guessing that will need to be changed.
+.",6,4,25,regEx,new feature,regex configuration entry
+20,,,0,0,0,Other,other failure, 
+21,"
+        Support comma separators in ISO-8601 date/time format for milliseconds
+      ","
+Presently the regex for parsing ISO-8601 formatted datetimes for supporting EXT-X-PROGRAM-DATE-TIME in HLS only supports period (.) separators.  Some HLS stream packagers use commas (,) to separate milliseconds.
+Examples:
+2014-08-06T11:00:00.000Z
+2014-08-06T11:00:00,000Z
+ISO 8601:2004 states that parsers should support both delineators, with a preference for commas.
+Additional information
+
+A decimal mark, either a comma or a dot (without any preference as stated in resolution 10 of the 22nd General Conference CGPM in 2003,[16] but with a preference for a comma according to ISO 8601:2004)
+
+.",1,0,0,regEx,bad smell,rejecting valid strings (T1)
+22,"
+        Update RegEx in js-to-json to match windows EOL
+      ","
+The current regex only works with the \n line endings as it expects a single character at the end of the line
+after the ; and \r\n in windows counts as two.
+This causes the en.json and qqq.json files to be recreated with 0 string entries after the metadata, so the entire file would just end up being:
+{
+    ""@metadata"": {
+        ""author"": ""Ellen Spertus "",
+        ""lastupdated"": ""2016-02-05 15:45:48.323000"",
+        ""locale"": ""en"",
+        ""messagedocumentation"" : ""qqq""
+    },
+}
+Which then causes an issue in the createmessages.js script as it expects at least a single key after the metadata and end up causing issues like:
+Error reading .\msg\json\en.json
+Traceback (most recent call last):
+  File ""i18n\create_messages.py"", line 149, in <module>
+    main()
+  File ""i18n\create_messages.py"", line 65, in main
+    source_defs = read_json_file(os.path.join(os.curdir, args.source_lang_file))
+  File ""C:\Users\***\Documents\GitHub\blockly\i18n\common.py"", line 64, in read_json_file
+    raise InputError(filename, str(e))
+common.InputError: .\msg\json\en.json: Expecting property name enclosed in double quotes: line 9 column 1 (char 176)
+('Error running i18n/create_messages.py: ', CalledProcessError())
+
+This is similar to #248, with a slightly different implementation, and would fix #447.
+.",1,0,0,regEx,bad smell,rejecting valid strings (T1)
+23,"
+        No-regex-spaces
+      ","
+The basics
+
+ I branched from develop
+ My pull request is against develop
+ My code follows the style guide
+
+The details
+Resolves
+None
+Proposed Changes
+Clean up the last piece of lint by using  {2} instead of   in a regex.
+Reason for Changes
+Application of the no-regex-spaces rule.
+Test Coverage
+Tested by running through some of the generator tests with different values for Blockly.Python.INDENT and verifying that the correct substitutions were occurring.  Tested with four spaces, two spaces and words (random word instead of spaces, should be inserted once for every two spaces in the original code.)
+Additional Information
+N/A
+.",1,1,2,regEx,bad smell,code smells
+24,,,0,0,0,Other,other failure, 
+25,"
+        feat(predicate): Added STR_REGEX
+      ","
+@jtk54
+.",1,0,0,Other,new feature,regex like implementation
+26,"
+        Regex validator.
+      ","
+Fixes #159.
+.",4,0,0,Other,other failure,regex like implementation
+27,"
+        Removed unecessary forced regex
+      ","
+This forced modification of the regex causes a brutal performance hit (7s queries vs 0.3s queries in the tested example).  It would be better to send the regex as desired in any calls to this.  This appears to be what it is doing in filestore_stats.py, but I'm not clear on all of the other places where this is getting called.  This passes unit tests and I am going to begin testing it in a live test environment, but any heads up on other places where this change needs to be accounted for would be appreciated.
+.",1,0,0,regEx,bad smell,code smells
+28,"
+        Edit pylintrc file
+      ","
+Update the regex in some of the fields, make sure the pylint adheres to google style standards as much as possible
+.",1,0,0,regEx,bad smell,bad smells
+29,"
+        Replace the reduction error regex by a plain error string
+      ","
+
+No description provided.
+
+.",1,0,0,regEx,bad smell,bad smells
+30,"
+        Issue #108: Shortcuts for boolean arguments
+      ","
+In response to this issue.  This adds a feature where a shortcut can be used for boolean arguments of functions.  For example the function
+def foo(bar=False):
+can be invoked as foo -b to set bar to True.  While developing this, I came across a couple concerns:
+
+In detecting whether or not arguments matched the pattern of a bool shortcut, I decided that python's regex library was the best way to solve this problem.  Is adding re to imports ok?
+If a naming collision occurs (see final assert of testBoolShortcutParsing) the program raises a FireError describing the ambiguity.  Is this a proper manner to use this error in?
+Currently, if a shortcut doesn't match any function argument, it is parsed as-is.  Should something else be done in this scenario?
+
+.",10,3,75,regEx,new feature,data processing
+31,"
+        Fix string equality validator and add test for the previously broken case
+      ","
+Previously for the equality validator, we'd just pass in the string as a regex pattern and use re.match() - but match will accept trailing characters in the candidate strings. Add fix for the issue and unit test.
+.",1,0,0,regEx,new feature,accepting invalid strings(T2)
+32,"
+        Enabled https regex for AdminUI
+      ","
+Just changed regex to allow entering an https:// url during initialization.
+
+.",1,0,0,regEx,incorrect behavior,rejecting valid strings (T1)
+33,"
+        Fix Cloud Project ID regex.
+      ","
+Update the Cloud Project ID regular expressions to match all valid Cloud Project ID's.
+.",2,0,0,regEx,incorrect behavior, 
+34,,,0,0,0,Other,other failure, 
+35,"
+        Fix #698 by adjusting the regex to not have \.  Still not 100% sure w…
+      ","
+…hy that was there.
+Also replaces bad names on input.  There are probably more invalid names but this is
+a start.
+
+This change is 
+.",3,3,23,regEx,bad smell, 

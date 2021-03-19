@@ -31,15 +31,13 @@ pullRequestList = googleDataSet['Pull Request'].values.tolist()
 
 print("Length of PR's of Apache:")
 print(len(pullRequestList))
-print(pullRequestList)
+
 
 dictw = {'title': [],
          'comment': []
        }
 resultDF = pd.DataFrame(dictw)
 
-
-# scraping the apache pull requests
 commitsList = []
 commitHistory = []
 filesChangedList = []
@@ -62,7 +60,7 @@ for i in range(len(pullRequestList)):
     except urllib.error.HTTPError as exception:
         print(URL + "- Doesnt Exist (HHTP 404 Error)")
     soup = BeautifulSoup(source, 'html.parser')
-    time.sleep(2)
+    time.sleep(1)
 
     mainTitle = soup.find('h1', attrs={'class': 'gh-header-title mb-2 lh-condensed f1 mr-0 flex-auto break-word'})
     comment = soup.find('div', attrs={'class': 'edit-comment-hide'})
@@ -108,11 +106,9 @@ greenlist = list(map(int, green))
 redlist = list(map(int, red))
 res_list = []
 for i in range(0, len(green)):
-    res_list.append(greenlist[i] - redlist[i])
+    res_list.append(greenlist[i] + redlist[i])
 
 resultDF['code_churn'] = res_list
-
-resultDF.to_csv(r'../data/result.csv', sep=',', mode='a', encoding='utf-8')
 
 # comment list
 comment_list = resultDF['comment'].values.tolist()
