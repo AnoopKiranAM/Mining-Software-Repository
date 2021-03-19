@@ -21,14 +21,15 @@ Step 1: Install below third party libraries using below commands.
 •	Install matplotlib 3.1.1 (pip install matplotlib==3.1.1)
 •	Install GitPython 3.1.0 (pip install Git Python==3.1.0)
 •	Install Beautiful Soup (pip install beautifulSoup4)
+
 ## Data
-Data-Preprocessing
+### Data-Preprocessing
 Total No. of Pull Requests in the beginning: 356
 Step 1: Filtering the PR's which has java, java script and python as the main languages of code.
 Step 2: Filtering the PR's having only apache as the repository. This is due to the more processing time it used to take if we have all 356 PR's. In order to quicken the process and execution we have restricted our process with PR's of Apache GitHub Repository only. In case we want all the PR's to be included we have to use the initial data frame in the initial block of code and avoid the apache Dataset which is currently being used.
 Total No. of PR's used for this analysis: 88 (PR of apache repository)
 
-Input Data
+### Input Data
 The input file for the execution is the data.csv file present in data folder. The data.csv file was obtained from the Research Paper. We have used the column by name "Pull Request" present in data.csv for our process. We have utilized all the PR link and using the automated process to obtaine the title, comment, conversation etc..,
 
 Output Data

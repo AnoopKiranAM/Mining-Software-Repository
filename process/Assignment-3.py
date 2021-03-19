@@ -108,7 +108,7 @@ greenlist = list(map(int, green))
 redlist = list(map(int, red))
 res_list = []
 for i in range(0, len(green)):
-    res_list.append(greenlist[i] + redlist[i])
+    res_list.append(greenlist[i] - redlist[i])
 
 resultDF['code_churn'] = res_list
 
