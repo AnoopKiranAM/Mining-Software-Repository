@@ -47,7 +47,7 @@ authorDateString = '01/02/19'
 authorDate = datetime.strptime(authorDateString, '%d/%m/%y')
 
 newUrls = []
-for i in range(len(pullRequestList)):
+for i in range(10):
     URL = pullRequestList[i]
     try:
         source = urllib.request.urlopen(URL)
@@ -58,10 +58,33 @@ for i in range(len(pullRequestList)):
     dateObtained = soup.find('div', attrs={'class': 'flex-auto min-width-0 mb-2'})
     if dateObtained:
         d = dateObtained.find('relative-time').get_text()
+        print(d)
         newD = d.split()
         nn = newD[1].replace(',', '')
+        if newD[0] == 'Jan':
+            mon = '01'
+        if newD[0] == 'Feb':
+            mon = '02'
         if newD[0] == 'Mar':
             mon = '03'
+        if newD[0] == 'Apr':
+            mon = '04'
+        if newD[0] == 'May':
+            mon = '05'
+        if newD[0] == 'Jun':
+            mon = '06'
+        if newD[0] == 'Jul':
+            mon = '07'
+        if newD[0] == 'Aug':
+            mon = '08'
+        if newD[0] == 'Sep':
+            mon = '09'
+        if newD[0] == 'Oct':
+            mon = '10'
+        if newD[0] == 'Nov':
+            mon = '11'
+        if newD[0] == 'Dec':
+            mon = '12'
         ye = newD[2][2]
         last = newD[2][3]
         year = ye + last
@@ -69,7 +92,7 @@ for i in range(len(pullRequestList)):
         newdate = datetime.strptime(finalDate, '%d/%m/%y')
         if authorDate < newdate:
             newUrls.append(URL)
-
+            
 commitsList = []
 commitHistory = []
 filesChangedList = []
