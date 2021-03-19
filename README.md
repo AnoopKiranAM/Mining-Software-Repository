@@ -97,6 +97,10 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 ![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/404Error.JPG)
 
+* As part of finding solution to threat that we have mentioned above we then found PR's that were raised or created after the date mentioned by author (February 1, 2019). We found very few PR's in this case there were not many of them in Google Repository. 
+
+* We have taken few of the suggestion and inputs given in the reply post of our Second Assignment post by our fellow colleagues and have implemented few more key words as part of identifying the root cause, manifestation and category result of our analysis for RQ2 from the paper.
+
 We have automated the process which was manually done in the research paper. We have looped each and every PR. Took the comments, conversations and title and analysed each of them with the Key word to form a Root Cause and Manifestation which was done in research paper. Identified the 3 root cause and manifestation within each type of root cause. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper.
 
 

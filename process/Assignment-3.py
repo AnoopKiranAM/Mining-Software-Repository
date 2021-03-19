@@ -140,14 +140,25 @@ resultDF['Root Cause'] = rootCause
 
 # Identifying Manifestation
 manifestation=[]
-newFeatureStringList=["add","ADD","url rewriting","octothrope", "PARSING","regex matching","Add a case-insensitive regex", "getSymbolsByName","suffix and prefix","predicate", "FireError","integration test "]
-
-incorrectBehaviourStringList=["proper","modified","fixed","fix","change","changing","changes","expanding regex","expand","automatically", "inbound finder", "synchronized", "Distinct","CSSRewriter regex", "issue", "discord", "zero uncovered lines", "new regex", "ManifestStaticFilesStorage", "Improve catch-all regex", "Re-arrange", "Better regex matching", "redirect regex", "character issue", "Exclude Placeables", "copy/pasting", "tolerant", "expediency", "Non-greedy regex ", "non-word characters", "extracting codec information", "Wrong Language Syntax", "edit", "equality validator", "Update", "linebreaks", "empty object", "flawed ", "dangerfile ES module","sanitization ","investigation ","trailing slash","versioned subdirectories","testNamePattern","package coupling","potential inconsistency","Preserve","pattern match","incorrectly escaping","testPathDirs","Resolve","Fix header link generation"]
-
+newFeatureStringList=["add","ADD","url rewriting","octothrope", "PARSING","regex matching",
+                      "Add a case-insensitive regex", "getSymbolsByName","suffix and prefix",
+                      "predicate", "FireError","integration test "]
+incorrectBehaviourStringList=["proper","modified","fixed","fix","change","changing","changes","expanding regex",
+                              "expand","automatically", "inbound finder", "synchronized", "Distinct",
+                              "CSSRewriter regex", "issue", "discord", "zero uncovered lines", "new regex",
+                              "ManifestStaticFilesStorage", "Improve catch-all regex", "Re-arrange",
+                              "Better regex matching", "redirect regex", "character issue", "Exclude Placeables",
+                              "copy/pasting", "tolerant", "expediency", "Non-greedy regex ", "non-word characters",
+                              "extracting codec information", "Wrong Language Syntax", "edit", "equality validator",
+                              "Update", "linebreaks", "empty object", "flawed ", "dangerfile ES module","sanitization "
+                             ,"investigation ","trailing slash","versioned subdirectories","testNamePattern",
+                              "package coupling","potential inconsistency","Preserve","pattern match",
+                              "incorrectly escaping","testPathDirs","Resolve","Fix header link generation"]
 compileErrorStringList=["detected","reworked","confusing","not support"]
-
-badsmellrStringList=["refactor","update","updating","parse","Replace","better", "invert", "deprecation warnings", "github's edit","correct escape for regex", "querySelectors", "warnings", "typo", "unused regex", "flake8 errors", "tests", "additional redirects", "Removed", "unnecessary", "corrupt", "invalid", "generator tests","problems", "Edit", "reduction error","more tests","literal expression"]
-
+badsmellrStringList=["refactor","update","updating","parse","Replace","better", "invert", "deprecation warnings",
+                     "github's edit","correct escape for regex", "querySelectors", "warnings", "typo", "unused regex",
+                     "flake8 errors", "tests", "additional redirects", "Removed", "unnecessary", "corrupt", "invalid",
+                     "generator tests","problems", "Edit", "reduction error","more tests","literal expression"]
 incorrectComputationStringList=["assertion","full path matching","small backwards compatability","weird semantics"]
 
 for index in range(len(comment_list)):
