@@ -20,8 +20,9 @@ In this project, we present an empirical study of 356 merged regex-related pull 
 DBLP Link: https://dl.acm.org/doi/10.1145/3379597.3387464
 
 ## Requirements
-Hardware: Windows, Mac or Linux operating system. Good and fast processor.
-Software: Anaconda, Python(pip install the required libraries mentioned below), Microsoft Excel, Pycharm
+ * ***Hardware*** : Windows, Mac or Linux operating system. Good and fast processor.
+
+* ***Software***: Anaconda, Python(pip install the required libraires mentioned below), Microsoft Excel
 
 ## Process: 
 ### Steps: 
@@ -164,7 +165,38 @@ Result of Mann-Whitney-Wilcoxon Test:
 * We would like to conclude that the Threat the author mentioned was true but it didnt cause a major difference in the result.
 
 
+# :blue_book: Requirements 
 
+* The requirements for this task do not surpass the assignment 2.In fact most heavy processes take place in assginment 2.
+
+* In the previous assignment we have jupyter notebook file as part of the reproduction effort. This time we have .py file and if the file is runned by any IDE like Pycharm or something then we need to install the packages before to avoid the error.
+
+* The packages needed are mentioned in the requirements.txt file
+
+* Other requirements are pretty much same in terms of hardware and software as before which includes:
+
+    * ***Hardware*** : Windows, Mac or Linux operating system. Good and fast processor.
+    * ***Software***: Anaconda, Python(pip install the required libraires mentioned below), Microsoft Excel, Pycharm
+
+# :heavy_check_mark: Process
+
+* The process pretty much remains the same as in Assignment 2 and will start off with installing all the softwares as mentioned in the requirements.txt file.
+
+### Install below third party libraries using below commands.
+
+* Install python 3.9.2 (mac) or for windows (https://www.python.org/downloads/)
+
+* Install numpy 1.17.2 (pip install numpy==1.17.2)
+
+* Install pandas 0.25.1 (pip install pandas==0.25.1)
+
+* Install matplotlib 3.1.1 (pip install matplotlib==3.1.1)
+
+* Install GitPython 3.1.0 (pip install Git Python==3.1.0)
+
+* Install Beautiful Soup (pip install beautifulSoup4)
+
+* ***Execution*** of the Assignment-3.py file will yeild the result which can be used for the detection of the Threats mentioned by author.
 
 
 
