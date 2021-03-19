@@ -27,7 +27,7 @@ facebookDataSet = df[df['Repo'].str.contains('/facebook')]
 
 
 # Using only Apache PR's
-pullRequestList = apacheDataSet['Pull Request'].values.tolist()
+pullRequestList = googleDataSet['Pull Request'].values.tolist()
 
 print("Length of PR's of Apache:")
 print(len(pullRequestList))
@@ -91,7 +91,7 @@ for i in range(len(pullRequestList)):
     else:
         filesChangedList.append(0)
 
-    code_churn_data = soup.find('span', attrs={'class': 'diffstat'})
+    code_churn_data = soup.find('div', attrs={'class': 'tabnav-extra float-right d-none d-md-block'})
 
     if code_churn_data and raw:
         for i in code_churn_data.find_all('span', attrs={'class': 'color-text-success'}):
@@ -233,10 +233,10 @@ for index in range(len(comment_list)):
     else:
         category.append(" ")
 resultDF['Category'] = category
-print(resultDF)
+# print(resultDF)
 
 #Storing the executed data in a result.csv file.
-resultDF.to_csv(r'../data/result.csv', sep=',', mode='a')
+resultDF.to_csv(r'../data/finalResult.csv', sep=',', mode='a')
 
 # code for Mann-Whitney U test to test the number of commits in both original and obtained data set
 from scipy.stats import mannwhitneyu
