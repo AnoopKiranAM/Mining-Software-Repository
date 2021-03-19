@@ -225,8 +225,9 @@ Result data which is executed and stored before already for a quick loopup by na
 
 The result of the new execution done by the user is stored in the Result.csv file which helps us in analyzing the solution for the External Validity Threats mentioned in paper by Author
 
-
-
+# :warning: Note:
+In Case the Assignment-3.py file has some errors with import or the verison of the library has something issues then just run the 
+ipynb file in jypyter file. (Just a hack :wink:)
 
 
 
