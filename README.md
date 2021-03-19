@@ -93,7 +93,10 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 ## :gear: Implementation
 
-* 
+* We have first filtered the PR's of Google repository and have identified the PR's which are still alive and are taking us to github page. There were some PR's which lead us to 404 page error now. We even have displayed those PR's in console.
+
+![alt text](http://url/to/img.png)
+
 We have automated the process which was manually done in the research paper. We have looped each and every PR. Took the comments, conversations and title and analysed each of them with the Key word to form a Root Cause and Manifestation which was done in research paper. Identified the 3 root cause and manifestation within each type of root cause. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper.
 
 
