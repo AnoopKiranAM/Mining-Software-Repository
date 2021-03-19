@@ -93,6 +93,10 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 ## :gear: Implementation
 
+* We have automated the process which was manually done in the research paper. We have looped each and every PR's. Took the comments, conversations and title and analysed each of them with the Key word to form a Root Cause, Manifestation and category which was done in research paper. 
+
+* Identified the 3 root cause and manifestation within each type of root cause successfully. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper. We have reproduced them and have the result stored in finalResult.csv file.
+
 * We have first filtered the PR's of Google repository and have identified the PR's which are still alive and are taking us to github page. There were some PR's which lead us to 404 page error now. We even have displayed those PR's in console.
 
 ![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/404Error.JPG)
@@ -101,7 +105,12 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 * We have taken few of the suggestion and inputs given in the reply post of our Second Assignment post by our fellow colleagues and have implemented few more key words as part of identifying the root cause, manifestation and category result of our analysis for RQ2 from the paper.
 
-We have automated the process which was manually done in the research paper. We have looped each and every PR. Took the comments, conversations and title and analysed each of them with the Key word to form a Root Cause and Manifestation which was done in research paper. Identified the 3 root cause and manifestation within each type of root cause. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper.
+![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/keywords.JPG)
+
+This has indeed helped in identifying the root cause, Manifestation and category of each PR's and made our analysis more accurate of what the authors has done manually.
+
+* Towards the end of the code execution we have depicted the 2 different results: one before the date (February 1, 2019) and one after the date (February 1, 2019). We can see that the result is pretty much same with minor variations.
+
 
 
 
