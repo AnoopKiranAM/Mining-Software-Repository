@@ -248,7 +248,7 @@ resultDF['Category'] = category
 #Storing the executed data in a result.csv file.
 resultDF.to_csv(r'../data/finalResult.csv', sep=',', mode='a')
 
-# code for Mann-Whitney U test to test the number of commits in both original and obtained data set
+# code for Mann-Whitney U test to test the number of commits in old and newly obtained data set
 from scipy.stats import mannwhitneyu
 
 batch_1 = resultDF['num_commits']
@@ -285,7 +285,7 @@ else:
     print('No significant difference between two samples')
 
 
-# code for Mann-Whitney U test to test the files changed in both original and obtained data set
+# code for Mann-Whitney U test to test the files changed in ola and new data set
 # from scipy.stats import mannwhitneyu
 
 # Take batch 1 and batch 2 data as per above example

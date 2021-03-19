@@ -112,6 +112,53 @@ This has indeed helped in identifying the root cause, Manifestation and category
 * Towards the end of the code execution we have depicted the 2 different results: one before the date (February 1, 2019) and one after the date (February 1, 2019). We can see that the result is pretty much same with minor variations.
 
 
+# :chart_with_upwards_trend: Result
+
+* As part of the result, first we have to get the PR's which are created or updated on the specified date mentioned by author in threats. 
+
+* We have identified those PR's and those which are dead for some or the other reason.
+
+*The graph below show the result of the old execution and the current execution. 
+
+* we can see that the results are pretty much similar and have almost the same number of commits, files changed and line of code edited in the newly obtained PR's
+
+* We have used the Mann-Whitney-Wilcoxon Test to investigate whether the dataset, regexPRs, and the allPRs dataset have the same distribution with proper score. And as show below the result also depicts that we have low p score with the alpha value being 0.001, which shows that there is no significant difference between the samples.
+
+
+```
+# code for Mann-Whitney U test to test the number of commits in old and newly obtained data set
+
+from scipy.stats import mannwhitneyu
+
+batch_1 = resultDF['num_commits']
+batch_2 = df['num_commits']
+
+# perform mann whitney test
+stat, p_value = mannwhitneyu(batch_1, batch_2)
+print('Statistics=%.2f, p=%.2f' % (stat, p_value))
+# Level of significance
+alpha = 0.001
+# conclusion
+if p_value < alpha:
+    print('Significant difference between two samples')
+else:
+    print('No significant difference between two samples')
+```
+
+Result of Mann-Whitney-Wilcoxon Test: 
+```
+
+```
+
+* I have done the same test on 3 different columns of the results namely commits, lines of code edited and files changed to verify if we have the same result or not.
+
+* I have represented the graph like above on lines of code edited columns as well and we can see the result is almost the same.
+
+* We would like to conclude that the Threat the author mentioned was true but it didnt cause a major difference in the result.
+
+
+
+
 
 
 
