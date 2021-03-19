@@ -59,13 +59,19 @@ The result of the execution is stored in the finalResult.csv file which helps us
 
 ## Delta
 ### Process Delta
-..* Our process includes the Effort of automation and involves more technical things of what the authors have done manually in the actual research paper. 
-..* We have tried to answer the RQ1 of the paper quite effectively in finding the root cause, manifestation and category of the PR's. As part of RQ1 we have identified the characteristics of problems being addressed in RegEx related PR's. The columns "Root Cause", "Manifestation", "Category" have been identified with similar values as in the paper.
-But we were not able to continue the anaysis of the of RQ2 to the end as we require the credentials of the other PR's of other repo used by the authors. Plus it was a combursome task to fetch all the code and analyze if there was RegEx addition(RegEx Add) or RegEx Updation(RegEx Edit) or RegEx Deletion (RegEx Delete) or RegEx API changes in the PR. This is where we faltered and couldnot complete the reproduction of the RQ2. Since we coudnt automate the process of fetching the code of every PR using the PR link, we couldnt not suggest the 10 common fix patters to fix either a RegEx Bug or RegEx API Bug.
+Our process includes the Effort of automation and involves more technical things of what the authors have done manually in the actual research paper. 
+We have tried to answer the RQ1 of the paper quite effectively in finding the root cause, manifestation and category of the PR's. As part of RQ1 we have identified the characteristics of problems being addressed in RegEx related PR's. The columns "Root Cause", "Manifestation", "Category" have been identified with similar values as in the original paper.
+
+But we were not able to continue the anaysis of the of RQ2 to the end as we require the credentials of the other PR's of other repo used by the authors. Plus it was a combursome task to fetch all the code and analyze if there was RegEx addition(RegEx Add) or RegEx Updation(RegEx Edit) or RegEx Deletion (RegEx Delete) or RegEx API changes in the PR. This is where we faltered and could not complete the reproduction of the RQ2, as a result of that we couldnt not suggest the 10 common fix patters to fix either a RegEx Bug or RegEx API Bug.
 
 ### Data Delta:
-To understand if  bugs are similar in complexity to other software bugs, author have compared the regex-related PRs (regexPRs) with a public dataset of PRs from GitHub projects that use PRs in their development cycle. But we could't get the dataset of PR's from other projects as we reqired the credentials to be used in pygithub. We have managed to gather the details like number of commits, number of files changes and modified lines of code for the RQ2 analysis. But we failed to compare it with the PR's of other Repo.
+To understand if  bugs are similar in complexity to other software bugs, author have compared the regex-related PRs (regexPRs) with a public dataset of PRs from GitHub projects that use PRs in their development cycle. But we could't get the dataset of PR's from other projects as we reqired the credentials to be used in pygithub. 
+
+We have managed to gather the details like number of commits, number of files changes and modified lines of code for the RQ2 analysis. But we failed to compare it with the PR's of other Repository
 Like Wise we found it hard to get all the lines of code being addressed in every PR and then analyze those lines of code to get the common fix patters for the RegEx related Bugs.
+
+
+# Experiment
 
 ## Threat
 Authors have begun the study of this regular expression related PR's in order to identify and understand the problems developers face when they are using RegEx while in their development process. They have selected only repositories that have Java, JavaScript or python as the primary language. That resulted in 664 merged pull requests from 195 repositories from 4 different organisations. Finally, after pruning these 664 PR's and filtered out 350 PR's that are only related to RegEx. But these PR's that they have taken was on 1st Feb 2019 or before. Myself and my colleague have identified that this might be a possible threat to validity as we encountered new PR's were in the repository while doing our previous assignment. Some of the PR were related to RegEx and some not. Those PR might have different root cause or manifestations and might give us an altogether new perspective though.
