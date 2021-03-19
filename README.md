@@ -104,6 +104,8 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 * As part of finding solution to threat that we have mentioned above we then found PR's that were raised or created after the date mentioned by author (February 1, 2019). We found very few PR's in this case there were not many of them in Google Repository. 
 
+![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/date.JPG)
+
 *To have the solution for the Threat we have added more key words in our detection of the Root Cause Manifestation and Category. We actually wanted to work with all the 356 PR's but the automation process was quite slow which delayed our findings. 
 
 ![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/keywords.JPG)
