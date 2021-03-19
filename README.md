@@ -48,14 +48,14 @@ Step 1: Filtering the PR's which has java, java script and python as the main la
 
 Step 2: Filtering the PR's having only apache as the repository. This is due to the more processing time it used to take if we have all 356 PR's. In order to quicken the process and execution we have restricted our process with PR's of Google GitHub Repository only. 
 
-In case we want all the PR's to be included we have to use the initial data frame in the initial block of code and avoid the Google Dataset which is currently being used. (Uncomment line 33 and comment line 30 in Assignment-3.py file)
+In case we want all the PR's to be included we have to use the initial data frame in the initial block of code and avoid the Google Dataset which is currently being used. (Uncomment line 35 and comment line 32 in Assignment-3.py file)
 Total No. of PR's used for this analysis: 88 (PR of apache repository)
 
 ### Input Data
-The input file for the execution is the data.csv file present in data folder. The data.csv file was obtained from the Research Paper. We have used the column by name "Pull Request" present in data.csv for our process. We have utilized all the PR link and using the automated process to obtaine the title, comment, conversation etc..,
+The input file for the execution is the [data.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/data.csv)  file present in data folder. The data.csv file was obtained from the Research Paper. We have used the column by name "Pull Request" present in data.csv for our process. We have utilized all the PR link and using the automated process to obtaine the title, comment, conversation etc..,
 
 ### Output Data
-Result data which is executed and stored before already for a quick loopup by name finalResult.csv:
+Result data which is executed and stored before already for a quick loopup by name [finalResult.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/finalResult.csv):
 
 The result of the execution is stored in the finalResult.csv file which helps us in answering the Research Question 1 of the paper.
 
@@ -64,13 +64,13 @@ The result of the execution is stored in the finalResult.csv file which helps us
 Our process includes the Effort of automation and involves more technical things of what the authors have done manually in the actual research paper. 
 We have tried to answer the RQ1 of the paper quite effectively in finding the root cause, manifestation and category of the PR's. As part of RQ1 we have identified the characteristics of problems being addressed in RegEx related PR's. The columns "Root Cause", "Manifestation", "Category" have been identified with similar values as in the original paper.
 
-But we were not able to continue the anaysis of the of RQ2 to the end as we require the credentials of the other PR's of other repo used by the authors. Plus it was a combursome task to fetch all the code and analyze if there was RegEx addition(RegEx Add) or RegEx Updation(RegEx Edit) or RegEx Deletion (RegEx Delete) or RegEx API changes in the PR. This is where we faltered and could not complete the reproduction of the RQ2, as a result of that we couldnt not suggest the 10 common fix patters to fix either a RegEx Bug or RegEx API Bug.
+But we were not able to continue the anaysis of the of RQ2 to the end as we require the credentials of the other PR's of other repo used by the authors. Plus it was a combursome task to fetch all the code and analyze if there was RegEx addition(RegEx Add) or RegEx Updation(RegEx Edit) or RegEx Deletion (RegEx Delete) or RegEx API changes in the PR. This is where we faltered and could not complete the reproduction of the RQ2, as a result of that we could not suggest the 10 common fix patterns to fix either a RegEx Bug or RegEx API Bug.
 
 ### Data Delta:
-To understand if  bugs are similar in complexity to other software bugs, author have compared the regex-related PRs (regexPRs) with a public dataset of PRs from GitHub projects that use PRs in their development cycle. But we could't get the dataset of PR's from other projects as we reqired the credentials to be used in pygithub. 
+To understand if  bugs are similar in complexity to other software bugs, author have compared the regex-related PRs (regexPRs) with a public dataset of PRs from GitHub projects that use PRs in their development cycle. But we couldn't get the dataset of PR's from other projects as we reqired the credentials to be used in pygithub. 
 
 We have managed to gather the details like number of commits, number of files changes and modified lines of code for the RQ2 analysis. But we failed to compare it with the PR's of other Repository
-Like Wise we found it hard to get all the lines of code being addressed in every PR and then analyze those lines of code to get the common fix patters for the RegEx related Bugs.
+Like Wise we found it hard to get all the lines of code being addressed in every PR and then analyze those lines of code to get the common fix patterns for the RegEx related Bugs.
 
 
 # :pencil: Experiment
@@ -97,7 +97,7 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 * We have automated the process which was manually done in the research paper. We have looped each and every PR's. Took the comments, conversations and title and analysed each of them with the Key word to form a Root Cause, Manifestation and category which was done in research paper. 
 
-* Identified the 3 root cause and manifestation within each type of root cause successfully. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper. We have reproduced them and have the result stored in finalResult.csv file.
+* Identified the 3 root cause and manifestation within each type of root cause successfully. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper. We have reproduced them and have the result stored in [finalResult.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/finalResult.csv).
 
 * We have first filtered the PR's of Google repository and have identified the PR's which are still alive and are taking us to github page. There were some PR's which lead us to 404 page error now. We even have displayed those PR's in console.
 
@@ -201,7 +201,7 @@ Result of Mann-Whitney-Wilcoxon Test:
 
 * Install Beautiful Soup (pip install beautifulSoup4)
 
-* ***Execution*** of the Assignment-3.py file will yeild the result which can be used for the detection of the Threats mentioned by author.
+* ***Execution*** of the [Assignment-3.py](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/process/Assignment-3.py)  file will yeild the result which can be used for the detection of the Threats mentioned by author.
 
 
 ## Data

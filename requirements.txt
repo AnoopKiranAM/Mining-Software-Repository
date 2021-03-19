@@ -1,0 +1,26 @@
+Install python 3.9.2 (mac) or for windows (https://www.python.org/downloads/)
+
+Install any IDE to run the .py file (preferrably Pycharm)
+
+Install numpy 1.17.2 (pip install numpy==1.17.2)
+
+Install pandas 0.25.1 (pip install pandas==0.25.1)
+
+Install matplotlib 3.1.1 (pip install matplotlib==3.1.1)
+
+Install GitPython 3.1.0 (pip install Git Python==3.1.0)
+
+Install Beautiful Soup (pip install beautifulSoup4)
+
+Import the Following libraries in Python IDE (If in Anaconda Jupyter Notebook then no need of these libraries as it has everything inbuilt in it)
+
+import requests
+from bs4 import BeautifulSoup
+import csv
+import pandas as pd
+import re
+import numpy
+import urllib.request
+import time
+from datetime import datetime
+from scipy.stats import mannwhitneyu
