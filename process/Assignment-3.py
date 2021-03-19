@@ -47,18 +47,33 @@ authorDateString = '01/02/19'
 authorDate = datetime.strptime(authorDateString, '%d/%m/%y')
 
 newUrls = []
-for i in range(10):
+commitsList = []
+commitHistory = []
+filesChangedList = []
+green = []
+red = []
+conversation = []
+
+headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Max-Age': '3600',
+    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+}
+
+for i in range(len(pullRequestList)):
     URL = pullRequestList[i]
     try:
         source = urllib.request.urlopen(URL)
     except urllib.error.HTTPError as exception:
         print(URL + "- Doesnt Exist (HHTP 404 Error)")
     soup = BeautifulSoup(source, 'html.parser')
+    time.sleep(1)
 
     dateObtained = soup.find('div', attrs={'class': 'flex-auto min-width-0 mb-2'})
     if dateObtained:
         d = dateObtained.find('relative-time').get_text()
-        print(d)
         newD = d.split()
         nn = newD[1].replace(',', '')
         if newD[0] == 'Jan':
@@ -93,29 +108,6 @@ for i in range(10):
         if authorDate < newdate:
             newUrls.append(URL)
 
-commitsList = []
-commitHistory = []
-filesChangedList = []
-green = []
-red = []
-conversation = []
-
-headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Methods': 'GET',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Max-Age': '3600',
-    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
-}
-
-for i in range(len(pullRequestList)):
-    URL = pullRequestList[i]
-    try:
-        source = urllib.request.urlopen(URL)
-    except urllib.error.HTTPError as exception:
-        print(URL + "- Doesnt Exist (HHTP 404 Error)")
-    soup = BeautifulSoup(source, 'html.parser')
-    time.sleep(1)
 
     mainTitle = soup.find('h1', attrs={'class': 'gh-header-title mb-2 lh-condensed f1 mr-0 flex-auto break-word'})
     comment = soup.find('div', attrs={'class': 'edit-comment-hide'})
