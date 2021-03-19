@@ -1,4 +1,4 @@
-# Mining-Software-Repository
+# Mining-Software-Repository - Assignment 3
 
 ## Baseline
 The following parts are taken from assignment 2: 
