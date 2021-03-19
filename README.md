@@ -218,12 +218,12 @@ Total No. of Pull Requests in the beginning: 356
 
 
 ### Input Data
-The input file for the execution is the [data.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/data.csv)  file present in data folder. The data.csv file was obtained from the Research Paper. We have used the column by name "Pull Request" present in data.csv for our process. We have utilized all the PR link and using the automated process to obtaine the title, comment, conversation etc..,
+The input file for the execution is the [data.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/data.csv)  file present in data folder. The data.csv file was obtained from the Research Paper.
 
 ### Output Data
-Result data which is executed and stored before already for a quick loopup by name finalResult.csv:
+Result data which is executed and stored before already for a quick loopup by name:  [finalResult.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/finalResult.csv)
 
-The result of the execution is stored in the finalResult.csv file which helps us in answering the Research Question 1 of the paper.
+The result of the new execution done by the user is stored in the Result.csv file which helps us in analyzing the solution for the External Validity Threats mentioned in paper by Author
 
 
 

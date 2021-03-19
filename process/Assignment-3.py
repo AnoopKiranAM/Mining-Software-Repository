@@ -92,7 +92,7 @@ for i in range(10):
         newdate = datetime.strptime(finalDate, '%d/%m/%y')
         if authorDate < newdate:
             newUrls.append(URL)
-            
+
 commitsList = []
 commitHistory = []
 filesChangedList = []
@@ -298,7 +298,7 @@ resultDF['Category'] = category
 # print(resultDF)
 
 #Storing the executed data in a result.csv file.
-resultDF.to_csv(r'../data/finalResult.csv', sep=',', mode='a')
+resultDF.to_csv(r'../data/Result.csv', sep=',', mode='a')
 
 # code for Mann-Whitney U test to test the number of commits in old and newly obtained data set
 from scipy.stats import mannwhitneyu
