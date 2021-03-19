@@ -7,6 +7,8 @@ import re
 import numpy
 import urllib.request
 import time
+from datetime import datetime
+
 
 # creating a data frame from the csv file
 df = pd.read_csv("../data/data.csv")
@@ -40,6 +42,33 @@ dictw = {'title': [],
          'comment': []
        }
 resultDF = pd.DataFrame(dictw)
+
+authorDateString = '01/02/19'
+authorDate = datetime.strptime(authorDateString, '%d/%m/%y')
+
+newUrls = []
+for i in range(len(pullRequestList)):
+    URL = pullRequestList[i]
+    try:
+        source = urllib.request.urlopen(URL)
+    except urllib.error.HTTPError as exception:
+        print(URL + "- Doesnt Exist (HHTP 404 Error)")
+    soup = BeautifulSoup(source, 'html.parser')
+
+    dateObtained = soup.find('div', attrs={'class': 'flex-auto min-width-0 mb-2'})
+    if dateObtained:
+        d = dateObtained.find('relative-time').get_text()
+        newD = d.split()
+        nn = newD[1].replace(',', '')
+        if newD[0] == 'Mar':
+            mon = '03'
+        ye = newD[2][2]
+        last = newD[2][3]
+        year = ye + last
+        finalDate = nn + "/" + mon + "/" + year
+        newdate = datetime.strptime(finalDate, '%d/%m/%y')
+        if authorDate < newdate:
+            newUrls.append(URL)
 
 commitsList = []
 commitHistory = []

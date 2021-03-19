@@ -584,3 +584,21 @@ a start.
 
 This change is 
 .",3,3,23,regEx,bad smell, 
+,title,comment,num_commits,files_changed,code_churn,Root Cause,Manifestation,Category
+0,"
+        Removed unnecessary regex escaping
+      ","
+This may not be the best way to solve this, but the normal use only involves _ and it gets escaped to _ so the datastore is unable to optimize against using a regex since ultimately the whole query becomes the full attribute and not a regex at all.  This changes the queries for even a 1hr window from multiple 5+ second queries all queries being sub 1s.
+.",1,0,0,regEx,bad smell,code smells
+,title,comment,num_commits,files_changed,code_churn,Root Cause,Manifestation,Category
+0,"
+        Removed unnecessary regex escaping
+      ","
+This may not be the best way to solve this, but the normal use only involves _ and it gets escaped to _ so the datastore is unable to optimize against using a regex since ultimately the whole query becomes the full attribute and not a regex at all.  This changes the queries for even a 1hr window from multiple 5+ second queries all queries being sub 1s.
+.",1,1,2,regEx,bad smell,code smells
+,title,comment,num_commits,files_changed,code_churn,Root Cause,Manifestation,Category
+0,"
+        Removed unnecessary regex escaping
+      ","
+This may not be the best way to solve this, but the normal use only involves _ and it gets escaped to _ so the datastore is unable to optimize against using a regex since ultimately the whole query becomes the full attribute and not a regex at all.  This changes the queries for even a 1hr window from multiple 5+ second queries all queries being sub 1s.
+.",1,1,2,regEx,bad smell,code smells
