@@ -6,18 +6,22 @@ The following parts are taken from assignment 2:
 This is a re-creation project of the original paper. “ An empirical study on Regular Expression Bugs” as a part of a course research “Mining Software Repositories (MSR 2020-21)” provided by Softlang Team at Universität Koblenz-Landau. 
 
 Done By:
--Anoop Kiran Angadi Manjunatha(219203384), Anirudh Kudaragundi Anand Rao.
+
+-Anoop Kiran Angadi Manjunatha(219203384), 
+
+Anirudh Kudaragundi Anand Rao(219203189).
 
 ## MetaData
 This project describes the reproduction of the research paper “ An empirical study on Regular Expression Bugs” authored by: Peipei Wang, Chris Brown, Jamie A.Jennings, Kathryn T.Stolee.
 
-In this project, we present an empirical study of 350 merged regex-related pull requests from Apache, Mozilla, Facebook, and Google GitHub repositories. Based on the classification the root causes and manifestations of those bugs,  we show that incorrect regular expression is the dominant behavior is the dominant factor for the cause of regular expression bugs.
+In this project, we present an empirical study of 356 merged regex-related pull requests from Apache, Mozilla, Facebook, and Google GitHub repositories. Based on the classification the root causes and manifestations of those bugs,  we show that incorrect regular expression is the dominant behavior for the cause of regular expression bugs.
+
 
 DBLP Link: https://dl.acm.org/doi/10.1145/3379597.3387464
 
 ## Requirements
 Hardware: Windows, Mac or Linux operating system. Good and fast processor.
-Software: Anaconda, Python(pip install the required libraries mentioned below), Microsoft Excel.
+Software: Anaconda, Python(pip install the required libraries mentioned below), Microsoft Excel, Pycharm
 
 ## Process: 
 ### Steps: 
@@ -40,19 +44,23 @@ Step 1: Install below third party libraries using below commands.
 Total No. of Pull Requests in the beginning: 356
 Step 1: Filtering the PR's which has java, java script and python as the main languages of code.
 
-Step 2: Filtering the PR's having only apache as the repository. This is due to the more processing time it used to take if we have all 356 PR's. In order to quicken the process and execution we have restricted our process with PR's of Apache GitHub Repository only. In case we want all the PR's to be included we have to use the initial data frame in the initial block of code and avoid the apache Dataset which is currently being used.
+Step 2: Filtering the PR's having only apache as the repository. This is due to the more processing time it used to take if we have all 356 PR's. In order to quicken the process and execution we have restricted our process with PR's of Google GitHub Repository only. 
+
+In case we want all the PR's to be included we have to use the initial data frame in the initial block of code and avoid the Google Dataset which is currently being used. (Uncomment line 33 and comment line 30 in Assignment-3.py file)
 Total No. of PR's used for this analysis: 88 (PR of apache repository)
 
 ### Input Data
 The input file for the execution is the data.csv file present in data folder. The data.csv file was obtained from the Research Paper. We have used the column by name "Pull Request" present in data.csv for our process. We have utilized all the PR link and using the automated process to obtaine the title, comment, conversation etc..,
 
 ### Output Data
-Result data which is executed and stored already for a quick loopup:
-The result of the execution is stored in the result.csv file which helps us in answering the Research Question 1 of the paper.
+Result data which is executed and stored before already for a quick loopup by name finalResult.csv:
+
+The result of the execution is stored in the finalResult.csv file which helps us in answering the Research Question 1 of the paper.
 
 ## Delta
 ### Process Delta
-Our process includes the Effort of automation and involves more technical things of what the authors have done manually in the actual research paper. We have tried to answer the RQ1 of the paper quite effectively in finding the root cause, manifestation and category of the PR's. As part of RQ1 we have identified the characteristics of problems being addressed in RegEx related PR's. The columns "Root Cause", "Manifestation", "Category" have been identified with similar values as in the paper.
+..* Our process includes the Effort of automation and involves more technical things of what the authors have done manually in the actual research paper. 
+..* We have tried to answer the RQ1 of the paper quite effectively in finding the root cause, manifestation and category of the PR's. As part of RQ1 we have identified the characteristics of problems being addressed in RegEx related PR's. The columns "Root Cause", "Manifestation", "Category" have been identified with similar values as in the paper.
 But we were not able to continue the anaysis of the of RQ2 to the end as we require the credentials of the other PR's of other repo used by the authors. Plus it was a combursome task to fetch all the code and analyze if there was RegEx addition(RegEx Add) or RegEx Updation(RegEx Edit) or RegEx Deletion (RegEx Delete) or RegEx API changes in the PR. This is where we faltered and couldnot complete the reproduction of the RQ2. Since we coudnt automate the process of fetching the code of every PR using the PR link, we couldnt not suggest the 10 common fix patters to fix either a RegEx Bug or RegEx API Bug.
 
 ### Data Delta:

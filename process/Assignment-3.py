@@ -26,8 +26,11 @@ googleDataSet = df[df['Repo'].str.contains('/google')]
 facebookDataSet = df[df['Repo'].str.contains('/facebook')]
 
 
-# Using only Apache PR's
+# Using only google PR's
 pullRequestList = googleDataSet['Pull Request'].values.tolist()
+
+#Using all the PR's from the paper (256)
+#pullRequestList=df['Pull Request'].values.tolist()
 
 print("Length of PR's of Apache:")
 print(len(pullRequestList))
