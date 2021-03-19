@@ -43,6 +43,7 @@ Step 1: Install below third party libraries using below commands.
 ## Data
 ### Data-Preprocessing
 Total No. of Pull Requests in the beginning: 356
+
 Step 1: Filtering the PR's which has java, java script and python as the main languages of code.
 
 Step 2: Filtering the PR's having only apache as the repository. This is due to the more processing time it used to take if we have all 356 PR's. In order to quicken the process and execution we have restricted our process with PR's of Google GitHub Repository only. 
@@ -203,9 +204,26 @@ Result of Mann-Whitney-Wilcoxon Test:
 * ***Execution*** of the Assignment-3.py file will yeild the result which can be used for the detection of the Threats mentioned by author.
 
 
-# Data 
+## Data
+### Data-Preprocessing
+Total No. of Pull Requests in the beginning: 356
+
+* Filtering the PR's which has java, java script and python as the main languages of code (Which the author has done by himself we had a check again on that in the csv file)
+
+* Filtering the PR's having only google as the repository.
+
+* To have the new PR's in our solution to the Threat mentioned by Authors, we have filters all the PR's which were rasied after February 1 2019.
+
+* We did have a filteration of those links which lead to 404 error for some reason. Those pages were not accessible so we had to filter them as well as shown above.
 
 
+### Input Data
+The input file for the execution is the [data.csv](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/data/data.csv)  file present in data folder. The data.csv file was obtained from the Research Paper. We have used the column by name "Pull Request" present in data.csv for our process. We have utilized all the PR link and using the automated process to obtaine the title, comment, conversation etc..,
+
+### Output Data
+Result data which is executed and stored before already for a quick loopup by name finalResult.csv:
+
+The result of the execution is stored in the finalResult.csv file which helps us in answering the Research Question 1 of the paper.
 
 
 
