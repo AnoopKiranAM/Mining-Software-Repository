@@ -71,20 +71,29 @@ We have managed to gather the details like number of commits, number of files ch
 Like Wise we found it hard to get all the lines of code being addressed in every PR and then analyze those lines of code to get the common fix patters for the RegEx related Bugs.
 
 
-# Experiment
+# :pencil: Experiment
 
 ## Threat
-Authors have begun the study of this regular expression related PR's in order to identify and understand the problems developers face when they are using RegEx while in their development process. They have selected only repositories that have Java, JavaScript or python as the primary language. That resulted in 664 merged pull requests from 195 repositories from 4 different organisations. Finally, after pruning these 664 PR's and filtered out 350 PR's that are only related to RegEx. But these PR's that they have taken was on 1st Feb 2019 or before. Myself and my colleague have identified that this might be a possible threat to validity as we encountered new PR's were in the repository while doing our previous assignment. Some of the PR were related to RegEx and some not. Those PR might have different root cause or manifestations and might give us an altogether new perspective though.
+In this assignment 3, we would investigate one of the threats to External validity found in "An Empirical Study on Regular Expression Bugs“ paper. The threat and the rationale behind it are as follows:
+
+Authors have begun the study of this regular expression related PR's in order to identify and understand the problems developers face when they are using RegEx while in their development process. They have selected only repositories that have Java, JavaScript or python as the primary language. That resulted in 664 merged pull requests from 195 repositories from 4 different organisations. Finally, after pruning these 664 PR's and filtered out 356 PR's that are only related to **Regular Expression**. But these PR's that they have used was dated on or before 1st Feb 2019. 
+
+Myself and my colleague have identified that this might be a possible threat to validity as we encountered new PR's were in the repository while doing our previous assignment. This threat is that additional pull requests may have been merged, and the existence of such pull requests would  effect our results if they substantially differ from the ones merged via GitHub. Which we also encountered in assignment 2 that some of the PR's were related to RegEx and some were not. Those PR might have different root cause or manifestations and might give us an altogether new perspective of our result.
 
 ## Traces
 From the paper "An Empirical Study on Regular Expression Bugs" - under Threats to Validity
-"External Validity. The PRs were sampled on February 1, 2019, and thus reflect the PRs available at a specific date and time. Results may not generalize to PRs sampled from a different period. We used GitHub’s merge status in selecting PRs, which poses a threat to validity [27]. This threat is that additional pull requests may have been merged, and the existence of such pull requests would affect our results if they substantially differ from the ones merged via GitHub. Further study is needed to assess the impact of this threat”. Here, we see that the author have mentioned the Threat explicitly and convey that the additional PR's that were merged after 1st February 2019 might change the research substantially. Thus, we decided to conduct the same research on repositories dealing with RegEx related PR's merged after the quoted date of data collection.
+
+"External Validity": The PRs were sampled on February 1, 2019, and thus reflect the PRs available at a specific date and time. Results may not generalize to PRs sampled from a different period. We used GitHub’s merge status in selecting PRs, which poses a threat to validity [27]. This threat is that additional pull requests may have been merged, and the existence of such pull requests would affect our results if they substantially differ from the ones merged via GitHub. Further study is needed to assess the impact of this threat”. 
+
+Here, we see that the author have mentioned the Threat explicitly and convey that the additional PR's that were merged after 1st February 2019 might change the research result substantially. Thus, we decided to conduct the same research on repositories dealing with RegEx related PR's merged after the quoted date of data collection.
 
 ## Feasibility
-As stated above, there are too many repositories from the big 4 organisations that are involved in the research which indeed have lot of manual work before identifying the new PR's related to RegEx. Since we are planning to have no language restriction this might be quite feasible as identifying the root cause and manifestation for RegEx related to a particular language will be quite tough. We will try to collect as many PR's as possible and come up with our new analysis. This might be a possible way to check whether the authors threats to validity have can be falsified or if its still preserves.
-This might be dependent on how many PR's we going to get and how many of them are related to RegEx off course.
+As stated above, there are too many repositories from the big 4 organisations that are involved in the research which indeed involves lot of manual work before identifying the new PR's related to RegEx and we have tried to automate those in this assignment. Since we are planning to have no language restriction as the original PR's are all filtered and have only 3 languages in them, this might be quite feasible for identifying the root cause and manifestation for those PR's. We will try to collect as many PR's as possible and come up with our new analysis. This might be a possible way to check whether the authors threats to validity can be falsified or if its still preserves.
+This might be dependent on how many PR's we going to get and how many of them are related to RegEx and how many are still alive.
 
-## Implementation
+## :gear: Implementation
+
+* 
 We have automated the process which was manually done in the research paper. We have looped each and every PR. Took the comments, conversations and title and analysed each of them with the Key word to form a Root Cause and Manifestation which was done in research paper. Identified the 3 root cause and manifestation within each type of root cause. Similarly each of the root cause is again carefully sorted into different category just like the authors have done in Research Paper.
 
 
