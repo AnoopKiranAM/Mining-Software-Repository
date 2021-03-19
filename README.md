@@ -120,6 +120,13 @@ This has indeed helped in identifying the root cause, Manifestation and category
 
 *The graph below show the result of the old execution and the current execution. 
 
+
+![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/Graph1.JPG)
+
+![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/Graph2.JPG)
+
+
+
 * we can see that the results are pretty much similar and have almost the same number of commits, files changed and line of code edited in the newly obtained PR's
 
 * We have used the Mann-Whitney-Wilcoxon Test to investigate whether the dataset, regexPRs, and the allPRs dataset have the same distribution with proper score. And as show below the result also depicts that we have low p score with the alpha value being 0.001, which shows that there is no significant difference between the samples.
@@ -146,9 +153,9 @@ else:
 ```
 
 Result of Mann-Whitney-Wilcoxon Test: 
-```
 
-```
+![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/mann.JPG)
+
 
 * I have done the same test on 3 different columns of the results namely commits, lines of code edited and files changed to verify if we have the same result or not.
 
