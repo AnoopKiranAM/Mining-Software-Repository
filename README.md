@@ -5,7 +5,10 @@ The following parts are taken from assignment 2: This is a re-creation project o
 
 ## MetaData
 This project describes the reproduction of the research paper “ An empirical study on Regular Expression Bugs” authored by: Peipei Wang, Chris Brown, Jamie A.Jennings, Kathryn T.Stolee.
+
 In this project, we present an empirical study of 350 merged regex-related pull requests from Apache, Mozilla, Facebook, and Google GitHub repositories. Based on the classification the root causes and manifestations of those bugs,  we show that incorrect regular expression is the dominant behavior is the dominant factor for the cause of regular expression bugs.
+
+DBLP Link: https://dl.acm.org/doi/10.1145/3379597.3387464
 
 ## Requirements
 Hardware: Windows, Mac or Linux operating system. Good and fast processor.
