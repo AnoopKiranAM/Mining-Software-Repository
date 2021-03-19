@@ -104,13 +104,15 @@ This might be dependent on how many PR's we going to get and how many of them ar
 
 * As part of finding solution to threat that we have mentioned above we then found PR's that were raised or created after the date mentioned by author (February 1, 2019). We found very few PR's in this case there were not many of them in Google Repository. 
 
-* We have taken few of the suggestion and inputs given in the reply post of our Second Assignment post by our fellow colleagues and have implemented few more key words as part of identifying the root cause, manifestation and category result of our analysis for RQ2 from the paper.
+*To have the solution for the Threat we have added more key words in our detection of the Root Cause Manifestation and Category. We actually wanted to work with all the 356 PR's but the automation process was quite slow which delayed our findings. 
 
 ![alt text](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/images/keywords.JPG)
 
-This has indeed helped in identifying the root cause, Manifestation and category of each PR's and made our analysis more accurate of what the authors has done manually.
+* This has indeed helped in identifying the root cause, Manifestation and category of each PR's and made our analysis more accurate of what the authors has done manually.
 
-* Towards the end of the code execution we have depicted the 2 different results: one before the date (February 1, 2019) and one after the date (February 1, 2019). We can see that the result is pretty much same with minor variations.
+* We have taken few of the suggestion and inputs given in the reply post of our Second Assignment post by our fellow colleagues and have implemented few more key elements as part of the solution and solve the threat that the author had.
+
+* Towards the end of the code execution we have depicted the 2 different results: one before the date (February 1, 2019) and one after the date (February 1, 2019) with our solution working fine for solving the Threat. We can see that the result is pretty much same with minor variations.
 
 
 # :chart_with_upwards_trend: Result
@@ -199,7 +201,7 @@ Result of Mann-Whitney-Wilcoxon Test:
 * ***Execution*** of the Assignment-3.py file will yeild the result which can be used for the detection of the Threats mentioned by author.
 
 
-
+# Data 
 
 
 
