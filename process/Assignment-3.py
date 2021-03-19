@@ -5,6 +5,8 @@ import csv
 import pandas as pd
 import re
 import numpy
+import urllib.request
+import time
 
 # creating a data frame from the csv file
 df = pd.read_csv("../data/data.csv")
@@ -25,7 +27,7 @@ facebookDataSet = df[df['Repo'].str.contains('/facebook')]
 
 
 # Using only Apache PR's
-pullRequestList = mozillaDataSet['Pull Request'].values.tolist()
+pullRequestList = apacheDataSet['Pull Request'].values.tolist()
 
 print("Length of PR's of Apache:")
 print(len(pullRequestList))
@@ -39,14 +41,28 @@ resultDF = pd.DataFrame(dictw)
 
 # scraping the apache pull requests
 commitsList = []
+commitHistory = []
 filesChangedList = []
 green = []
 red = []
+conversation = []
+
+headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Max-Age': '3600',
+    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+}
 
 for i in range(len(pullRequestList)):
     URL = pullRequestList[i]
-    r = requests.get(URL)
-    soup = BeautifulSoup(r.content, 'html.parser')
+    try:
+        source = urllib.request.urlopen(URL)
+    except urllib.error.HTTPError as exception:
+        print(URL + "- Doesnt Exist (HHTP 404 Error)")
+    soup = BeautifulSoup(source, 'html.parser')
+    time.sleep(2)
 
     mainTitle = soup.find('h1', attrs={'class': 'gh-header-title mb-2 lh-condensed f1 mr-0 flex-auto break-word'})
     comment = soup.find('div', attrs={'class': 'edit-comment-hide'})
@@ -57,29 +73,27 @@ for i in range(len(pullRequestList)):
             heading = row.get_text()
             for roww in comment.findAll('td', attrs={'class': 'd-block comment-body markdown-body js-comment-body'}):
                 finalComment = roww.get_text() + '.'
-            #                 for rowww in roww.find_all(['p', 'li']):
-            #                     finalComment=finalComment+rowww.get_text()+'.'
             resultDF.loc[len(resultDF.index)] = [heading, finalComment]
     else:
         resultDF.loc[len(resultDF.index)] = [heading, ""]
 
-    commits = soup.find('span', attrs={'class': 'js-updateable-pull-request-commits-count Counter'})
+    raw = soup.find('nav', attrs={'class': 'tabnav-tabs d-flex overflow-auto'})
 
-    if mainTitle and commits:
-        commitsList.append(commits.get_text())
+    if raw:
+        for span in raw.findAll('span', attrs={'class': 'Counter js-updateable-pull-request-commits-count'}):
+            commitsList.append(span.get_text())
     else:
         commitsList.append(0)
 
-    files_changed = soup.find('span', attrs={'id': 'files_tab_counter'})
-
-    if mainTitle and files_changed:
-        filesChangedList.append(files_changed.get_text())
+    if raw and raw.findAll('span', attrs={'id': 'files_tab_counter'}):
+        for span in raw.findAll('span', attrs={'id': 'files_tab_counter'}):
+            filesChangedList.append(span.get_text())
     else:
         filesChangedList.append(0)
 
-    code_churn_data = soup.find('div', attrs={'class': 'tabnav-extra float-right d-none d-md-block'})
+    code_churn_data = soup.find('span', attrs={'class': 'diffstat'})
 
-    if mainTitle and code_churn_data:
+    if code_churn_data and raw:
         for i in code_churn_data.find_all('span', attrs={'class': 'color-text-success'}):
             green.append(re.sub(r'\D', '', i.get_text()))
         for j in code_churn_data.find_all('span', attrs={'class': 'color-text-danger'}):
@@ -98,7 +112,7 @@ for i in range(0, len(green)):
 
 resultDF['code_churn'] = res_list
 
-# resultDF.to_csv(r'../data/result.csv', sep=',', mode='a')
+resultDF.to_csv(r'../data/result.csv', sep=',', mode='a', encoding='utf-8')
 
 # comment list
 comment_list = resultDF['comment'].values.tolist()
@@ -127,11 +141,15 @@ resultDF['Root Cause'] = rootCause
 
 # Identifying Manifestation
 manifestation=[]
-newFeatureStringList=["add","ADD"]
-incorrectBehaviourStringList=["proper","modified","fixed","fix","change","changing","changes","expanding regex","expand"]
-compileErrorStringList=["detected","reworked","confusing"]
-badsmellrStringList=["refactor","update","updating","parse","Replace","better"]
-incorrectComputationStringList=["assertion"]
+newFeatureStringList=["add","ADD","url rewriting","octothrope", "PARSING","regex matching","Add a case-insensitive regex", "getSymbolsByName","suffix and prefix","predicate", "FireError","integration test "]
+
+incorrectBehaviourStringList=["proper","modified","fixed","fix","change","changing","changes","expanding regex","expand","automatically", "inbound finder", "synchronized", "Distinct","CSSRewriter regex", "issue", "discord", "zero uncovered lines", "new regex", "ManifestStaticFilesStorage", "Improve catch-all regex", "Re-arrange", "Better regex matching", "redirect regex", "character issue", "Exclude Placeables", "copy/pasting", "tolerant", "expediency", "Non-greedy regex ", "non-word characters", "extracting codec information", "Wrong Language Syntax", "edit", "equality validator", "Update", "linebreaks", "empty object", "flawed ", "dangerfile ES module","sanitization ","investigation ","trailing slash","versioned subdirectories","testNamePattern","package coupling","potential inconsistency","Preserve","pattern match","incorrectly escaping","testPathDirs","Resolve","Fix header link generation"]
+
+compileErrorStringList=["detected","reworked","confusing","not support"]
+
+badsmellrStringList=["refactor","update","updating","parse","Replace","better", "invert", "deprecation warnings", "github's edit","correct escape for regex", "querySelectors", "warnings", "typo", "unused regex", "flake8 errors", "tests", "additional redirects", "Removed", "unnecessary", "corrupt", "invalid", "generator tests","problems", "Edit", "reduction error","more tests","literal expression"]
+
+incorrectComputationStringList=["assertion","full path matching","small backwards compatability","weird semantics"]
 
 for index in range(len(comment_list)):
     if any(x in comment_list[index] for x in newFeatureStringList) or any(x in title_list[index] for x in newFeatureStringList):
@@ -152,15 +170,48 @@ resultDF['Manifestation'] = manifestation
 # Identifying Category
 
 category=[]
-acceptingInvalidStringList=["Bugfix for regex","Fix integration test script","SSP mail form"]
-incorrectExtractionStringList=["StringExpander regex","fix whitelist","Fix greedy regex"]
-dataProcessingStringList=["Add helper script","Add sec","Enabling extraction","Add custom context"]
-badSmellStringList=["Refactor","Rename","Optimize"]
-regexConfigStringList=["configurable","config"]
-regexLikeImplStringList=["REGEXP_EXTRACT","Regex replacement","regex filter"]
-rejectingValidStringList=["better regex","RegEx pattern should be updated","replaces the regex"]
-codeSmelldStringList=["regex pattern","replace by regular","Remove"]
 
+#T2
+acceptingInvalidStringList=["Bugfix for regex","Fix integration test script","SSP mail form","Optimize inbound finder",
+                            "display_name regex","regex for matching origins","WhiteNoise serve","catch-all regex",
+                            "regex matching for native JS","fake FTL Message","safeEntityNameRe regex","Java Comment RegEx",
+                            "string equality validator","module detection regex","root pattern",
+                            "regex that really never matches","refactor server routing","bad routing regex",
+                            "Jest moduleNameMapper regex","exclude node_modules"]
+
+incorrectExtractionStringList=["StringExpander regex","fix whitelist","Fix greedy regex","Non-greedy regex",
+                               "docblock comments","regex match in `fv`","filename without directory"]
+
+dataProcessingStringList=["Add helper script","Add sec","Enabling extraction","Add custom context","in new usernames",
+                          "octothrope comments","SVG elements","Shortcuts for boolean arguments","add init option","support for CSS Modules"]
+
+#designs smell
+badSmellStringList=["Refactor","Rename","Optimize","Invert regex","refactor regex","Edit pylintrc file",
+                    "reduction error regex","regular expression literals","serializer smarter"]
+
+regexConfigStringList=["configurable","config","simple url rewriting","mount point for autofs","testNamePattern CLI",
+                       "Better filter"]
+
+regexLikeImplStringList=["REGEXP_EXTRACT","Regex replacement","regex filter","regex matching","Added STR_REGEX",
+                         "Regex validator","results in typeahead"]
+#T1
+rejectingValidStringList=["better regex","RegEx pattern should be updated","replaces the regex","Import l10n files",
+                          "gauntlet regex","ESR version suffix","regex for validation","Discord validation",
+                          "TOOLKIT_VERSION_REGEX","regex in `nl2br`","interactive-examples to iframes",
+                          "legacy redirect regex","non alphanumeric slugs","regex to be tolerant","AttributeError Regex",
+                          "regular expression for CODEC","comma separators in ISO-8601","RegEx in js-to-json",
+                          "Enabled https regex","linebreaks when scanning","toThrowError fixes","hyphens for Regex",
+                          "click-to-open on Windows","handling regex symbols","sanitization in jest-mock",
+                          "minus operator in compiler","versioned subdirectories","with interactive snapshots","dangerfile",
+                          "jest-matcher-utils","bug in regex","cleanupStackTrace work","pluses in filenames",
+                          "test.jsx? or spec.jsx?","escaping of \"\.\"","tests on Node 8.7","Express.js regex for docs",
+                          "interpolating into testMatch","Objective-C Category"]
+
+codeSmelldStringList=["regex pattern","replace by regular","Remove","version matching regex","Replace the \'flags\'",
+                      "Fix regex issues","escape for regex","entity\'s using querySelectors","CSS Lint Regex",
+                      "(re.LOCALE) flag for regexs","typo in mozillians","flake8 errors","regex escaping","subrip timing",
+                      "No-regex-spaces","unecessary forced regex","Refactor + add more","requested through proxy",
+                      "Better filter UI","tag end regex","valid attribute regex"]
 
 for index in range(len(comment_list)):
     if any(x in comment_list[index] for x in acceptingInvalidStringList) or any(x in title_list[index] for x in acceptingInvalidStringList):
@@ -182,10 +233,10 @@ for index in range(len(comment_list)):
     else:
         category.append(" ")
 resultDF['Category'] = category
+print(resultDF)
 
 #Storing the executed data in a result.csv file.
 resultDF.to_csv(r'../data/result.csv', sep=',', mode='a')
-
 
 # code for Mann-Whitney U test to test the number of commits in both original and obtained data set
 from scipy.stats import mannwhitneyu
