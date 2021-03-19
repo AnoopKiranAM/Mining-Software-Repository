@@ -176,7 +176,7 @@ Result of Mann-Whitney-Wilcoxon Test:
 
 * In the previous assignment we have jupyter notebook file as part of the reproduction effort. This time we have .py file and if the file is runned by any IDE like Pycharm or something then we need to install the packages before to avoid the error.
 
-* The packages needed are mentioned in the requirements.txt file
+* The packages needed are mentioned in the [requirements.txt](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/requirements.txt).
 
 * Other requirements are pretty much same in terms of hardware and software as before which includes:
 
@@ -185,7 +185,7 @@ Result of Mann-Whitney-Wilcoxon Test:
 
 # :heavy_check_mark: Process
 
-* The process pretty much remains the same as in Assignment 2 and will start off with installing all the softwares as mentioned in the requirements.txt file.
+* The process pretty much remains the same as in Assignment 2 and will start off with installing all the softwares as mentioned in the [requirements.txt](https://github.com/AnoopKiranAM/Mining-Software-Repository/blob/main/requirements.txt)
 
 ### Install below third party libraries using below commands.
 
